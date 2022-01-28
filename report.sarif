@@ -1,144 +1,49 @@
 {
-  "version" : "2.1.0",
-  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
-  "runs" : [ {
-    "results" : [ {
-      "ruleId" : "utbot.unchecked.ArithmeticException1337",
-      "kind" : "fail",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Test case: `example(null, 0)`"
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Tool Name",
+          "rules": [
+            {
+              "id": "R01,
+              "properties" : {
+               "id" : "java/unsafe-deserialization",
+               "kind" : "path-problem",
+               "name" : "...",
+               "problem.severity" : "error",
+               "security-severity" : "9.8",
+            }
+          ]
+        }
       },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
+      "results": [
+        {
+          "ruleId": "R01",
+          "message": {
+            "text": "Result text. This result does not have a rule associated."
           },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1,
-            "endLine" : 2,
-            "endColumn" : 2
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fileURI"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 7,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "39fa2ee980eb94b0:1"
           }
         }
-      } ],
-      "partialFingerprints": {
-        "primaryLocationLineHash": "39fa2ee980eb94b0:1"
-      }
-    }, {
-      "ruleId" : "utbot.unchecked.NullPointerException1337",
-      "kind" : "fail",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.",
-        "markdown" : "Test case: `example(null, -255)`"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1,
-            "endLine" : 2,
-            "endColumn" : 2
-          }
-        }
-      } ],
-      "partialFingerprints": {
-        "primaryLocationLineHash": "39fa2e2980eb94b0:1"
-      }
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException1337",
-      "kind" : "fail",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.",
-        "markdown" : "Test case: `example([-255], 32)`"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1,
-            "endLine" : 2,
-            "endColumn" : 2
-          }
-        }
-      } ],
-      "partialFingerprints": {
-        "primaryLocationLineHash": "39fa2e5980eb94b0:1"
-      }
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException1337",
-      "kind" : "fail",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `example([-255], -256)`"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "endLine" : 2,
-            "startColumn" : 1,
-            "endColumn" : 2
-          }
-        }
-      } ]
-    } ],
-    "tool" : {
-      "driver" : {
-        "name" : "utbot",
-        "organization" : "huawei",
-        "version" : "1.0",
-        "rules" : [ {
-          "id" : "utbot.unchecked.ArithmeticException1337",
-          "name" : "ArithmeticException1337",
-          "shortDescription" : {
-            "text" : "Seems like an exception ArithmeticException1337 might be thrown."
-          },
-          "fullDescription" : {
-            "text" : "Full: Seems like an exception ArithmeticException1337 might be thrown."
-          },
-          "help" : {
-            "text" : "tool driver help text"
-          }
-        }, {
-          "id" : "utbot.unchecked.NullPointerException1337",
-          "name" : "NullPointerException1337",
-          "shortDescription" : {
-            "text" : "Seems like an exception NullPointerException1337 might be thrown."
-          },
-          "fullDescription" : {
-            "text" : "Full: Seems like an exception NullPointerException1337 might be thrown."
-          },
-          "help" : {
-            "text" : "tool driver help text"
-          }
-        }, {
-          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException1337",
-          "name" : "ArrayIndexOutOfBoundsException1337",
-          "shortDescription" : {
-            "text" : "Seems like an exception ArrayIndexOutOfBoundsException1337 might be thrown."
-          },
-          "fullDescription" : {
-            "text" : "Full: Seems like an exception ArrayIndexOutOfBoundsException1337 might be thrown."
-          },
-          "help" : {
-            "text" : "tool driver help text"
-          }
-        } ]
-      }
+      ]
     }
-  } ]
+  ]
 }

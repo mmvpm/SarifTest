@@ -10,19 +10,19 @@
         "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
         "markdown" : "Test case: `example(null, 0)`"
       },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "endLine" : 2,
-            "startColumn" : 1,
-            "endColumn" : 2
+      "locations": [
+        {
+          "physicalLocation": {
+            "artifactLocation": {
+              "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
+            },
+            "region": {
+              "startColumn": 1,
+              "startLine": 2
+            }
           }
         }
-      } ]
+      ],
     }, {
       "ruleId" : "utbot.unchecked.NullPointerException",
       "kind" : "fail",

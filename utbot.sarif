@@ -3,12 +3,12 @@
   "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs" : [ {
     "results" : [ {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "ruleId" : "utbot.unchecked.ArithmeticException22",
       "kind" : "fail",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Test case: `example(null, 0)`"
+        "text" : "Unchecked exception: java.lang.ArithmeticException22: / by zero.",
+        "markdown" : "Test case: `example(pnull, 0)`"
       },
       "locations": [
         {
@@ -22,7 +22,7 @@
             }
           }
         }
-      ],
+      ]
     }, {
       "ruleId" : "utbot.unchecked.NullPointerException",
       "kind" : "fail",

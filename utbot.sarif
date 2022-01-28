@@ -13,11 +13,11 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
+            "uri" : "/src/Main.java"
           },
           "region" : {
             "startLine" : 0,
-            "startColumn" : 0
+            "startColumn" : 1
           }
         }
       }, {
@@ -36,11 +36,11 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
+            "uri" : "/src/Main.java"
           },
           "region" : {
             "startLine" : 0,
-            "startColumn" : 0
+            "startColumn" : 1
           }
         }
       }, {
@@ -54,16 +54,16 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `example([1], 128)`"
+        "markdown" : "Test case: `example([-255], 128)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
+            "uri" : "/src/Main.java"
           },
           "region" : {
             "startLine" : 0,
-            "startColumn" : 0
+            "startColumn" : 1
           }
         }
       }, {
@@ -77,16 +77,16 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `example([1], -256)`"
+        "markdown" : "Test case: `example([-255], -256)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
+            "uri" : "/src/Main.java"
           },
           "region" : {
             "startLine" : 0,
-            "startColumn" : 0
+            "startColumn" : 1
           }
         }
       }, {

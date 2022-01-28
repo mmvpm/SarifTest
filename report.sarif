@@ -60,7 +60,9 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 3
+            "startLine" : 5,
+            "startColumn" : 12,
+            "endColumn" : 23
           }
         }
       } ]
@@ -78,7 +80,9 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 3
+            "startLine" : 6,
+            "startColumn" : 8,
+            "endColumn" : 25
           }
         }
       } ]
@@ -87,7 +91,7 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `example([1], 128)`"
+        "markdown" : "Test case: `example([-255], 128)`"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -96,7 +100,9 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 3
+            "startLine" : 6,
+            "startColumn" : 8,
+            "endColumn" : 25
           }
         }
       } ]
@@ -105,7 +111,7 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `example([1], -256)`"
+        "markdown" : "Test case: `example([-255], -256)`"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -114,7 +120,9 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 3
+            "startLine" : 6,
+            "startColumn" : 8,
+            "endColumn" : 25
           }
         }
       } ]

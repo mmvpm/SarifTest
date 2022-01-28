@@ -250,7 +250,7 @@
               "shortDescription": {
                 "text": "The first sentence in a KDoc comment should end with correct punctuation."
               }
-            },
+            }
           ],
           "semanticVersion": "1.19.0",
           "version": "1.19.0"

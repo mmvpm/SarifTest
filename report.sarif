@@ -14,7 +14,7 @@
             "text" : "Seems like an exception ArithmeticException might be thrown."
           },
           "fullDescription" : {
-            "text" : "UtBot detects an unchecked exception."
+            "text" : "Unchecked exception ArithmeticException detected."
           }
         }, {
           "id" : "utbot.unchecked.NullPointerException",
@@ -23,7 +23,7 @@
             "text" : "Seems like an exception NullPointerException might be thrown."
           },
           "fullDescription" : {
-            "text" : "UtBot detects an unchecked exception."
+            "text" : "Unchecked exception NullPointerException detected."
           }
         }, {
           "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
@@ -32,7 +32,7 @@
             "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
           },
           "fullDescription" : {
-            "text" : "UtBot detects an unchecked exception."
+            "text" : "Unchecked exception ArrayIndexOutOfBoundsException detected."
           }
         } ]
       }
@@ -47,18 +47,14 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/Main.java",
+            "uri" : "src\\MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 1,
-            "endLine" : 1
+            "startLine" : 3
           }
         }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "5061c3315a741b7d:1"
-      }
+      } ]
     }, {
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
@@ -69,40 +65,32 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/Main.java",
+            "uri" : "src\\MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 1,
-            "endLine" : 1
+            "startLine" : 3
           }
         }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "5061c3315a741b7d:1"
-      }
+      } ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.",
-        "markdown" : "Test case: `example([-255], 32)`"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
+        "markdown" : "Test case: `example([-255], 128)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/Main.java",
+            "uri" : "src\\MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 1,
-            "endLine" : 1
+            "startLine" : 3
           }
         }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "5061c3315a741b7d:1"
-      }
+      } ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
@@ -113,18 +101,14 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/Main.java",
+            "uri" : "src\\MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 1,
-            "endLine" : 1
+            "startLine" : 3
           }
         }
-      } ],
-      "partialFingerprints" : {
-        "primaryLocationLineHash" : "5061c3315a741b7d:1"
-      }
+      } ]
     } ]
   } ]
 }

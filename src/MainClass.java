@@ -1,4 +1,4 @@
-public class Main {
+public class MainClass {
 
     public static int example(int[] a, int i) {
         if (i == -2)

@@ -11,37 +11,37 @@
           "id" : "utbot.unchecked.ArithmeticException",
           "name" : "ArithmeticException",
           "shortDescription" : {
-            "text" : "Seems like an exception ArithmeticException might be thrown."
+            "text" : "Unchecked ArithmeticException detected."
           },
           "fullDescription" : {
-            "text" : "Unchecked exception ArithmeticException detected."
+            "text" : "Seems like an exception ArithmeticException might be thrown."
           },
           "help" : {
-            "text" : "https://github.com/microsoft/sarif-tutorials/blob/main/README.md"
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
           }
         }, {
           "id" : "utbot.unchecked.NullPointerException",
           "name" : "NullPointerException",
           "shortDescription" : {
-            "text" : "Seems like an exception NullPointerException might be thrown."
+            "text" : "Unchecked NullPointerException detected."
           },
           "fullDescription" : {
-            "text" : "Unchecked exception NullPointerException detected."
+            "text" : "Seems like an exception NullPointerException might be thrown."
           },
           "help" : {
-            "text" : "https://github.com/microsoft/sarif-tutorials/blob/main/README.md"
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
           }
         }, {
           "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
           "name" : "ArrayIndexOutOfBoundsException",
           "shortDescription" : {
-            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+            "text" : "Unchecked ArrayIndexOutOfBoundsException detected."
           },
           "fullDescription" : {
-            "text" : "Unchecked exception ArrayIndexOutOfBoundsException detected."
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
           },
           "help" : {
-            "text" : "https://github.com/microsoft/sarif-tutorials/blob/main/README.md"
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html"
           }
         } ]
       }

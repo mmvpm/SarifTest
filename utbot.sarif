@@ -13,7 +13,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "SarifTest/src/Main.java"
+            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
           },
           "region" : {
             "startLine" : 1,

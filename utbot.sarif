@@ -1,0 +1,125 @@
+{
+  "version" : "2.1.0",
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs" : [ {
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
+        "markdown" : "Test case: `unsafe(null,\n0)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+          },
+          "region" : {
+            "startLine" : 0,
+            "startColumn" : 0
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "Polygon.unsafe"
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.",
+        "markdown" : "Test case: `unsafe(null,\n-255)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+          },
+          "region" : {
+            "startLine" : 0,
+            "startColumn" : 0
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "Polygon.unsafe"
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
+        "markdown" : "Test case: `unsafe([1],\n128)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+          },
+          "region" : {
+            "startLine" : 0,
+            "startColumn" : 0
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "Polygon.unsafe"
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
+        "markdown" : "Test case: `unsafe([1],\n-256)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+          },
+          "region" : {
+            "startLine" : 0,
+            "startColumn" : 0
+          }
+        }
+      }, {
+        "logicalLocations" : [ {
+          "fullyQualifiedName" : "Polygon.unsafe"
+        } ]
+      } ]
+    } ],
+    "tool" : {
+      "driver" : {
+        "name" : "utbot",
+        "organization" : "huawei",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          }
+        }, {
+          "id" : "utbot.unchecked.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          }
+        }, {
+          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          }
+        } ]
+      }
+    }
+  } ]
+}

@@ -3,7 +3,7 @@
   "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs" : [ {
     "results" : [ {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "ruleId" : "utbot.unchecked.ArithmeticException1337",
       "kind" : "fail",
       "level" : "error",
       "message" : {
@@ -24,7 +24,7 @@
         }
       } ]
     }, {
-      "ruleId" : "utbot.unchecked.NullPointerException",
+      "ruleId" : "utbot.unchecked.NullPointerException1337",
       "kind" : "fail",
       "level" : "error",
       "message" : {
@@ -45,12 +45,12 @@
         }
       } ]
     }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException1337",
       "kind" : "fail",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `example([-255], 128)`"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.",
+        "markdown" : "Test case: `example([-255], 32)`"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -66,7 +66,7 @@
         }
       } ]
     }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException1337",
       "kind" : "fail",
       "level" : "error",
       "message" : {
@@ -93,22 +93,22 @@
         "organization" : "huawei",
         "version" : "1.0",
         "rules" : [ {
-          "id" : "utbot.unchecked.ArithmeticException",
-          "name" : "ArithmeticException",
+          "id" : "utbot.unchecked.ArithmeticException1337",
+          "name" : "ArithmeticException1337",
           "shortDescription" : {
-            "text" : "Seems like an exception ArithmeticException + might be thrown."
+            "text" : "Seems like an exception ArithmeticException1337 might be thrown."
           }
         }, {
-          "id" : "utbot.unchecked.NullPointerException",
-          "name" : "NullPointerException",
+          "id" : "utbot.unchecked.NullPointerException1337",
+          "name" : "NullPointerException1337",
           "shortDescription" : {
-            "text" : "Seems like an exception NullPointerException + might be thrown."
+            "text" : "Seems like an exception NullPointerException1337 might be thrown."
           }
         }, {
-          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-          "name" : "ArrayIndexOutOfBoundsException",
+          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException1337",
+          "name" : "ArrayIndexOutOfBoundsException1337",
           "shortDescription" : {
-            "text" : "Seems like an exception ArrayIndexOutOfBoundsException + might be thrown."
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException1337 might be thrown."
           }
         } ]
       }

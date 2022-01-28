@@ -1,261 +1,117 @@
 {
-  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
-  "version": "2.1.0",
-  "runs": [
-    {
-      "results": [
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "C:/work/UnitTestBot/UTBotJava/utbot-junit-contest/src/main/kotlin/com/huawei/utbot/polygon.kt"
-                },
-                "region": {
-                  "startColumn": 11,
-                  "startLine": 18
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Top level constant names should match the pattern: [A-Z][_A-Z0-9]*"
+  "version" : "2.1.0",
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs" : [ {
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
+        "markdown" : "Test case: `example(null, 0)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "SarifTest/src/Main.java"
           },
-          "ruleId": "detekt.naming.TopLevelPropertyNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "C:/work/UnitTestBot/UTBotJava/utbot-junit-contest/src/main/kotlin/com/huawei/utbot/polygon.kt"
-                },
-                "region": {
-                  "startColumn": 11,
-                  "startLine": 19
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Top level constant names should match the pattern: [A-Z][_A-Z0-9]*"
-          },
-          "ruleId": "detekt.naming.TopLevelPropertyNaming"
-        },
-        {
-          "level": "warning",
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "C:/work/UnitTestBot/UTBotJava/utbot-junit-contest/src/main/kotlin/com/huawei/utbot/polygon.kt"
-                },
-                "region": {
-                  "startColumn": 11,
-                  "startLine": 20
-                }
-              }
-            }
-          ],
-          "message": {
-            "text": "Top level constant names should match the pattern: [A-Z][_A-Z0-9]*"
-          },
-          "ruleId": "detekt.naming.TopLevelPropertyNaming"
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
         }
-      ],
-      "tool": {
-        "driver": {
-          "downloadUri": "https://github.com/detekt/detekt/releases/download/v1.19.0/detekt",
-          "fullName": "detekt",
-          "guid": "022ca8c2-f6a2-4c95-b107-bb72c43263f3",
-          "informationUri": "https://detekt.github.io/detekt",
-          "language": "en",
-          "name": "detekt",
-          "organization": "detekt",
-          "rules": [
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#longparameterlist",
-              "id": "detekt.complexity.LongParameterList",
-              "name": "LongParameterList",
-              "shortDescription": {
-                "text": "The more parameters a function has the more complex it is. Long parameter lists are often used to control complex algorithms and violate the Single Responsibility Principle. Prefer functions with short parameter lists."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#longmethod",
-              "id": "detekt.complexity.LongMethod",
-              "name": "LongMethod",
-              "shortDescription": {
-                "text": "One method should have one responsibility. Long methods tend to handle many things at once. Prefer smaller methods to make them easier to understand."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#largeclass",
-              "id": "detekt.complexity.LargeClass",
-              "name": "LargeClass",
-              "shortDescription": {
-                "text": "One class should have one responsibility. Large classes tend to handle many things at once. Split up large classes into smaller classes that are easier to understand."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#complexinterface",
-              "id": "detekt.complexity.ComplexInterface",
-              "name": "ComplexInterface",
-              "shortDescription": {
-                "text": "An interface contains too many functions and properties. Large classes tend to handle many things at once. An interface should have one responsibility. Split up large interfaces into smaller ones that are easier to understand."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#complexmethod",
-              "id": "detekt.complexity.ComplexMethod",
-              "name": "ComplexMethod",
-              "shortDescription": {
-                "text": "Prefer splitting up complex methods into smaller, easier to understand methods."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#stringliteralduplication",
-              "id": "detekt.complexity.StringLiteralDuplication",
-              "name": "StringLiteralDuplication",
-              "shortDescription": {
-                "text": "Multiple occurrences of the same string literal within a single file detected."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#methodoverloading",
-              "id": "detekt.complexity.MethodOverloading",
-              "name": "MethodOverloading",
-              "shortDescription": {
-                "text": "Methods which are overloaded often might be harder to maintain. Furthermore, these methods are tightly coupled. Refactor these methods and try to use optional parameters."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#nestedblockdepth",
-              "id": "detekt.complexity.NestedBlockDepth",
-              "name": "NestedBlockDepth",
-              "shortDescription": {
-                "text": "Excessive nesting leads to hidden complexity. Prefer extracting code to make it easier to understand."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#toomanyfunctions",
-              "id": "detekt.complexity.TooManyFunctions",
-              "name": "TooManyFunctions",
-              "shortDescription": {
-                "text": "Too many functions inside a/an file/class/object/interface always indicate a violation of the single responsibility principle. Maybe the file/class/object/interface wants to manage too many things at once. Extract functionality which clearly belongs together."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#complexcondition",
-              "id": "detekt.complexity.ComplexCondition",
-              "name": "ComplexCondition",
-              "shortDescription": {
-                "text": "Complex conditions should be simplified and extracted into well-named methods if necessary."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#labeledexpression",
-              "id": "detekt.complexity.LabeledExpression",
-              "name": "LabeledExpression",
-              "shortDescription": {
-                "text": "Expression with labels increase complexity and affect maintainability."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#replacesafecallchainwithrun",
-              "id": "detekt.complexity.ReplaceSafeCallChainWithRun",
-              "name": "ReplaceSafeCallChainWithRun",
-              "shortDescription": {
-                "text": "Chains of safe calls on non-nullable types can be surrounded with run {}"
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/complexity.html#namedarguments",
-              "id": "detekt.complexity.NamedArguments",
-              "name": "NamedArguments",
-              "shortDescription": {
-                "text": "Parameters of function invocation must all be named"
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/coroutines.html#globalcoroutineusage",
-              "id": "detekt.coroutines.GlobalCoroutineUsage",
-              "name": "GlobalCoroutineUsage",
-              "shortDescription": {
-                "text": "Usage of GlobalScope instance is highly discouraged"
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/coroutines.html#injectdispatcher",
-              "id": "detekt.coroutines.InjectDispatcher",
-              "name": "InjectDispatcher",
-              "shortDescription": {
-                "text": "Don't hardcode dispatchers when creating new coroutines or calling `withContext`. Use dependency injection for dispatchers to make testing easier."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/coroutines.html#redundantsuspendmodifier",
-              "id": "detekt.coroutines.RedundantSuspendModifier",
-              "name": "RedundantSuspendModifier",
-              "shortDescription": {
-                "text": "`suspend` modifier is only needed for functions that contain suspending calls"
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/coroutines.html#sleepinsteadofdelay",
-              "id": "detekt.coroutines.SleepInsteadOfDelay",
-              "name": "SleepInsteadOfDelay",
-              "shortDescription": {
-                "text": "Usage of Thread.sleep() in coroutines can potentially halt multiple coroutines at once."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/coroutines.html#suspendfunwithflowreturntype",
-              "id": "detekt.coroutines.SuspendFunWithFlowReturnType",
-              "name": "SuspendFunWithFlowReturnType",
-              "shortDescription": {
-                "text": "`suspend` modifier should not be used for functions that return a Coroutines Flow type. Flows are cold streams and invoking a function that returns one should not produce any side effects."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/comments.html#commentoverprivatefunction",
-              "id": "detekt.comments.CommentOverPrivateFunction",
-              "name": "CommentOverPrivateFunction",
-              "shortDescription": {
-                "text": "Comments for private functions should be avoided. Prefer giving the function an expressive name. Split it up in smaller, self-explaining functions if necessary."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/comments.html#commentoverprivateproperty",
-              "id": "detekt.comments.CommentOverPrivateProperty",
-              "name": "CommentOverPrivateProperty",
-              "shortDescription": {
-                "text": "Private properties should be named such that they explain themselves even without a comment."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/comments.html#deprecatedblocktag",
-              "id": "detekt.comments.DeprecatedBlockTag",
-              "name": "DeprecatedBlockTag",
-              "shortDescription": {
-                "text": "Do not use the @deprecated block tag, which is not supported by KDoc. Use the @Deprecated annotation instead."
-              }
-            },
-            {
-              "helpUri": "https://detekt.github.io/detekt/comments.html#endofsentenceformat",
-              "id": "detekt.comments.EndOfSentenceFormat",
-              "name": "EndOfSentenceFormat",
-              "shortDescription": {
-                "text": "The first sentence in a KDoc comment should end with correct punctuation."
-              }
-            }
-          ],
-          "semanticVersion": "1.19.0",
-          "version": "1.19.0"
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.",
+        "markdown" : "Test case: `example(null, -255)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "SarifTest/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
         }
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.",
+        "markdown" : "Test case: `example([-255], 32)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "SarifTest/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
+        "markdown" : "Test case: `example([-255], -256)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "SarifTest/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
+      } ]
+    } ],
+    "tool" : {
+      "driver" : {
+        "name" : "utbot",
+        "organization" : "huawei",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          }
+        }, {
+          "id" : "utbot.unchecked.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          }
+        }, {
+          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          }
+        } ]
       }
     }
-  ]
+  } ]
 }

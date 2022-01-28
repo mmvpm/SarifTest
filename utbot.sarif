@@ -8,12 +8,12 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Test case: `unsafe(null,\n0)`"
+        "markdown" : "Test case: `example(null, 0)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
           },
           "region" : {
             "startLine" : 0,
@@ -22,7 +22,7 @@
         }
       }, {
         "logicalLocations" : [ {
-          "fullyQualifiedName" : "Polygon.unsafe"
+          "fullyQualifiedName" : "Main.example"
         } ]
       } ]
     }, {
@@ -31,12 +31,12 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.NullPointerException.",
-        "markdown" : "Test case: `unsafe(null,\n-255)`"
+        "markdown" : "Test case: `example(null, -255)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
           },
           "region" : {
             "startLine" : 0,
@@ -45,7 +45,7 @@
         }
       }, {
         "logicalLocations" : [ {
-          "fullyQualifiedName" : "Polygon.unsafe"
+          "fullyQualifiedName" : "Main.example"
         } ]
       } ]
     }, {
@@ -54,12 +54,12 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `unsafe([1],\n128)`"
+        "markdown" : "Test case: `example([1], 128)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
           },
           "region" : {
             "startLine" : 0,
@@ -68,7 +68,7 @@
         }
       }, {
         "logicalLocations" : [ {
-          "fullyQualifiedName" : "Polygon.unsafe"
+          "fullyQualifiedName" : "Main.example"
         } ]
       } ]
     }, {
@@ -77,12 +77,12 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `unsafe([1],\n-256)`"
+        "markdown" : "Test case: `example([1], -256)`"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Polygon.java"
+            "uri" : "C:\\work\\UnitTestBot\\UTBotJava\\utbot-junit-contest\\src\\main\\java\\Main.java"
           },
           "region" : {
             "startLine" : 0,
@@ -91,7 +91,7 @@
         }
       }, {
         "logicalLocations" : [ {
-          "fullyQualifiedName" : "Polygon.unsafe"
+          "fullyQualifiedName" : "Main.example"
         } ]
       } ]
     } ],

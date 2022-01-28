@@ -47,7 +47,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src\\MainClass.java",
+            "uri" : "src/MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
@@ -65,7 +65,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src\\MainClass.java",
+            "uri" : "src/MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
@@ -83,7 +83,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src\\MainClass.java",
+            "uri" : "src/MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
@@ -101,7 +101,7 @@
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src\\MainClass.java",
+            "uri" : "src/MainClass.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {

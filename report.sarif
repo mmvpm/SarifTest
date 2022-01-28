@@ -1,84 +1,130 @@
 {
-  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
-  "version": "2.1.0",
-  "runs": [
-    {
-      "tool": {
-        "driver": {
-          "name": "ToolName",
-          "semanticVersion": "2.0.0",
-          "rules": [
-            {
-              "id": "3f292041e51d22005ce48f39df3585d44ce1b0ad",
-              "name": "js/unused-local-variable",
-              "shortDescription": {
-                "text": "Unused variable, import, function or class"
-              },
-              "fullDescription": {
-                "text": "Unused variables, imports, functions or classes may be a symptom of a bug and should be examined carefully."
-              }
-            },
-            {
-              "id": "d5b664aefd5ca4b21b52fdc1d744d7d6ab6886d0",
-              "name": "js/inconsistent-use-of-new",
-              "shortDescription": {
-                "text": "Inconsistent use of 'new'"
-              },
-              "fullDescription": {
-                "text": "If a function is intended to be a constructor, it should always be invoked with 'new'. Otherwise, it should always be invoked as a normal function, that is, without 'new'."
-              }
-            }
-          ]
-        }
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "utbot",
+        "organization" : "huawei",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          },
+          "fullDescription" : {
+            "text" : "UtBot detects an unchecked exception."
+          }
+        }, {
+          "id" : "utbot.unchecked.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "fullDescription" : {
+            "text" : "UtBot detects an unchecked exception."
+          }
+        }, {
+          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          },
+          "fullDescription" : {
+            "text" : "UtBot detects an unchecked exception."
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
+        "markdown" : "Test case: `example(null, 0)`"
       },
-      "results": [
-        {
-          "ruleId": "3f292041e51d22005ce48f39df3585d44ce1b0ad",
-          "message": {
-            "text": "Unused variable foo."
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/example.java",
+            "uriBaseId" : "%SRCROOT%"
           },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/Main.java",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 2,
-                  "startColumn": 7,
-                  "endColumn": 10
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "39fa2ee980eb94b0:1"
-          }
-        },
-        {
-          "ruleId": "d5b664aefd5ca4b21b52fdc1d744d7d6ab6886d0",
-          "message": {
-            "text": "Function resolvingPromise is sometimes invoked as a constructor (for example [here](1)), and sometimes as a normal function (for example [here](2))."
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "src/Main.java",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 2
-                }
-              }
-            }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "5061c3315a741b7d:1"
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 1
           }
         }
-      ]    
-    }
-  ]
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5061c3315a741b7e:1"
+      }
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.",
+        "markdown" : "Test case: `example(null, -255)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/example.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 1
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5061c3315a741b7a:1"
+      }
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
+        "markdown" : "Test case: `example([1], 128)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/example.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 1
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5061c3315a741b7b:1"
+      }
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
+        "markdown" : "Test case: `example([1], -256)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/example.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 1
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5061c3315a741b70:1"
+      }
+    } ]
+  } ]
 }

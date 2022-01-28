@@ -14,7 +14,7 @@ public class output {
     @Test(timeout = 10000)
     //@org.junit.jupiter.api.DisplayName("main: -> PrintStreamPrintln")
     public void testMain_PrintStreamPrintln() throws Throwable  {
-        Main.main(null);
+        MainClass.main(null);
     }
     ///endregion
     
@@ -34,7 +34,7 @@ public class output {
         intArray[0] = -255;
         intArray[1] = -255;
         
-        int actual = Main.example(intArray, 1);
+        int actual = MainClass.example(intArray, 1);
         
         assertEquals(-254, actual);
     }
@@ -51,7 +51,7 @@ public class output {
     @Test(timeout = 10000, expected = Throwable.class)
     //@org.junit.jupiter.api.DisplayName("example: tmp = 1 / i : True -> ThrowArithmeticException")
     public void testExample_ThrowArithmeticException() throws Throwable  {
-        Main.example(null, 0);
+        MainClass.example(null, 0);
     }
     
     /**
@@ -63,7 +63,7 @@ public class output {
     @Test(timeout = 10000, expected = Throwable.class)
     //@org.junit.jupiter.api.DisplayName("example: return a[i] + tmp : True -> ThrowNullPointerException")
     public void testExample_ThrowNullPointerException() throws Throwable  {
-        Main.example(null, -255);
+        MainClass.example(null, -255);
     }
     
     /**
@@ -78,7 +78,7 @@ public class output {
         int[] intArray = new int[1];
         intArray[0] = -255;
         
-        Main.example(intArray, 32);
+        MainClass.example(intArray, 32);
     }
     
     /**
@@ -93,7 +93,7 @@ public class output {
         int[] intArray = new int[1];
         intArray[0] = -255;
         
-        Main.example(intArray, -256);
+        MainClass.example(intArray, -256);
     }
     ///endregion
     
@@ -110,7 +110,7 @@ public class output {
     @Test(timeout = 10000, expected = Throwable.class)
     //@org.junit.jupiter.api.DisplayName("example: i == -2 -> ThrowRuntimeException")
     public void testExample_IEqualsNegative2() throws Throwable  {
-        Main.example(null, -2);
+        MainClass.example(null, -2);
     }
     ///endregion
     

@@ -11,16 +11,6 @@
         "markdown" : "Test case: `example(null, 0)`"
       },
       "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1
-          }
-        }
-      }, {
         "logicalLocations" : [ {
           "fullyQualifiedName" : "Main.example"
         } ]
@@ -34,16 +24,6 @@
         "markdown" : "Test case: `example(null, -255)`"
       },
       "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1
-          }
-        }
-      }, {
         "logicalLocations" : [ {
           "fullyQualifiedName" : "Main.example"
         } ]
@@ -54,19 +34,9 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `example([-255], 128)`"
+        "markdown" : "Test case: `example([1], 128)`"
       },
       "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1
-          }
-        }
-      }, {
         "logicalLocations" : [ {
           "fullyQualifiedName" : "Main.example"
         } ]
@@ -77,19 +47,9 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `example([-255], -256)`"
+        "markdown" : "Test case: `example([1], -256)`"
       },
       "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "/src/Main.java"
-          },
-          "region" : {
-            "startLine" : 1,
-            "startColumn" : 1
-          }
-        }
-      }, {
         "logicalLocations" : [ {
           "fullyQualifiedName" : "Main.example"
         } ]

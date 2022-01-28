@@ -1,0 +1,117 @@
+{
+  "version" : "2.1.0",
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "runs" : [ {
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
+        "markdown" : "Test case: `example(null, 0)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.",
+        "markdown" : "Test case: `example(null, -255)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
+        "markdown" : "Test case: `example([1], 128)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "kind" : "fail",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
+        "markdown" : "Test case: `example([1], -256)`"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "https://github.com/IdeaSeeker/SarifTest/blob/main/src/Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
+      } ]
+    } ],
+    "tool" : {
+      "driver" : {
+        "name" : "utbot",
+        "organization" : "huawei",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          }
+        }, {
+          "id" : "utbot.unchecked.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          }
+        }, {
+          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          }
+        } ]
+      }
+    }
+  } ]
+}

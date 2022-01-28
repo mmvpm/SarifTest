@@ -15,6 +15,9 @@
           },
           "fullDescription" : {
             "text" : "Unchecked exception ArithmeticException detected."
+          },
+          "help" : {
+            "text" : "https://github.com/microsoft/sarif-tutorials/blob/main/README.md"
           }
         }, {
           "id" : "utbot.unchecked.NullPointerException",
@@ -24,6 +27,9 @@
           },
           "fullDescription" : {
             "text" : "Unchecked exception NullPointerException detected."
+          },
+          "help" : {
+            "text" : "https://github.com/microsoft/sarif-tutorials/blob/main/README.md"
           }
         }, {
           "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
@@ -33,6 +39,9 @@
           },
           "fullDescription" : {
             "text" : "Unchecked exception ArrayIndexOutOfBoundsException detected."
+          },
+          "help" : {
+            "text" : "https://github.com/microsoft/sarif-tutorials/blob/main/README.md"
           }
         } ]
       }
@@ -78,7 +87,7 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `example([-255], 128)`"
+        "markdown" : "Test case: `example([1], 128)`"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -96,7 +105,7 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `example([-255], -256)`"
+        "markdown" : "Test case: `example([1], -256)`"
       },
       "locations" : [ {
         "physicalLocation" : {

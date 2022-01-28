@@ -11,9 +11,17 @@
         "markdown" : "Test case: `example(null, 0)`"
       },
       "locations" : [ {
-        "logicalLocations" : [ {
-          "fullyQualifiedName" : "Main.example"
-        } ]
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
       } ]
     }, {
       "ruleId" : "utbot.unchecked.NullPointerException",
@@ -24,9 +32,17 @@
         "markdown" : "Test case: `example(null, -255)`"
       },
       "locations" : [ {
-        "logicalLocations" : [ {
-          "fullyQualifiedName" : "Main.example"
-        } ]
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
       } ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
@@ -34,12 +50,20 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Test case: `example([1], 128)`"
+        "markdown" : "Test case: `example([-255], 128)`"
       },
       "locations" : [ {
-        "logicalLocations" : [ {
-          "fullyQualifiedName" : "Main.example"
-        } ]
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
       } ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
@@ -47,12 +71,20 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Test case: `example([1], -256)`"
+        "markdown" : "Test case: `example([-255], -256)`"
       },
       "locations" : [ {
-        "logicalLocations" : [ {
-          "fullyQualifiedName" : "Main.example"
-        } ]
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "Main.java"
+          },
+          "region" : {
+            "startLine" : 1,
+            "endLine" : 2,
+            "startColumn" : 1,
+            "endColumn" : 2
+          }
+        }
       } ]
     } ],
     "tool" : {

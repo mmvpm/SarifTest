@@ -93,10 +93,10 @@
         "organization" : "huawei",
         "version" : "1.0",
         "rules" : [ {
-          "id" : "utbot.unchecked.ArithmeticException",
-          "name" : "ArithmeticException",
+          "id" : "utbot.unchecked.ArithmeticException22",
+          "name" : "ArithmeticException22",
           "shortDescription" : {
-            "text" : "Seems like an exception ArithmeticException might be thrown."
+            "text" : "Seems like an exception ArithmeticException22 might be thrown."
           }
         }, {
           "id" : "utbot.unchecked.NullPointerException",

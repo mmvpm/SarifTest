@@ -46,21 +46,12 @@
         } ]
       }
     },
-    "artifacts": [ {
-      "location": {
-        "uri" : "test/MainClassTest.java",
-        "uriBaseId" : "%SRCROOT%"
-      },
-      "contents": {
-        "text": "some content text..."
-      }
-    } ],
     "results" : [ {
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Test case: `callCallExample(false, null, -1)`,\n[Generated code for this test](/SarifTest/blob/main/test/MainClassTest.java)"
+        "markdown" : "Test case: `callCallExample(false, null, -1)`,\n[Generated code for this test](SarifTest/blob/main/test/MainClassTest.java)"
       },
       "locations" : [ {
         "physicalLocation" : {

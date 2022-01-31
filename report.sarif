@@ -64,6 +64,20 @@
             "startLine" : 4
           }
         }
+      } ],
+      "relatedLocations": [ {
+        "message": {
+          "text": "Test case generated here."
+        },
+        "physicalLocation": {
+          "artifactLocation": {
+            "uri": "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region": {
+            "startLine": 21
+          }
+        }
       } ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",

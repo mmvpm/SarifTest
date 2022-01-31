@@ -51,7 +51,7 @@
       "level" : "error",
       "message" : {
         "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero. [Generated test](1)",
-        "markdown" : "Test case: `callCallExample(false, null, -1)`,\n[Generated code for this test](../../blob/main/test/MainClassTest.java)"
+        "markdown" : "Test case: `callCallExample(false, null, -1)`,\n[Generated code for this test](../../blob/main/test/MainClassTest.java)\n[Generated test m](1)"
       },
       "locations" : [ {
         "physicalLocation" : {

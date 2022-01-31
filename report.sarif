@@ -50,15 +50,14 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero. [Generated test](1)",
-        "markdown" : "Test case: `callCallExample(false, null, -1)`,\n[Generated code for this test](../../blob/main/test/MainClassTest.java)\n[Generated test m](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
+        "markdown" : "Test case: `callCallExample(false, null, -1)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
             "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%",
-            "index" : 0
+            "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
             "startLine" : 4
@@ -67,16 +66,13 @@
       } ],
       "relatedLocations": [ {
         "id" : 1,
-        "message": {
-          "text": "Test case generated here."
-        },
         "physicalLocation": {
           "artifactLocation": {
             "uri": "test/MainClassTest.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region": {
-            "startLine": 21
+            "startLine":30
           }
         }
       } ]

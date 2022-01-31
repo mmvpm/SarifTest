@@ -50,7 +50,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\n`example(null)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {

@@ -75,7 +75,78 @@
             "startLine" : 63
           }
         }
-      } ]
+      } ],
+      "codeFlows": [ {
+          "message": {
+            "text": "Tracing the path from user input to insecure usage."
+          },
+          "threadFlows": [ {
+              "locations": [ {
+                  "message": {
+                    "text": "The tainted data enters the system here."
+                  },
+                  "location": {
+                    "physicalLocation" : {
+                      "artifactLocation" : {
+                        "uri" : "test/MainClassTest.java",
+                        "uriBaseId" : "%SRCROOT%"
+                      },
+                      "region" : {
+                        "startLine" : 64
+                      }
+                    }
+                  },
+                  "state": {
+                    "expr": {
+                      "text": "undef"
+                    }
+                  },
+                  "nestingLevel": 0
+                }, {
+                  "location": {
+                    "physicalLocation" : {
+                      "artifactLocation" : {
+                        "uri" : "test/MainClassTest.java",
+                        "uriBaseId" : "%SRCROOT%"
+                      },
+                      "region" : {
+                        "startLine" : 65
+                      }
+                    }
+                  },
+                  "state": {
+                    "expr": {
+                      "text": "42"
+                    }
+                  },
+                  "nestingLevel": 0
+                }, {
+                  "message": {
+                    "text": "The tainted data is used insecurely here."
+                  },
+                  "location": {
+                    "physicalLocation" : {
+                      "artifactLocation" : {
+                        "uri" : "test/MainClassTest.java",
+                        "uriBaseId" : "%SRCROOT%"
+                      },
+                      "region" : {
+                        "startLine" : 66
+                      }
+                    }
+                  },
+                  "state": {
+                    "raw_input": {
+                      "text": "42"
+                    }
+                  },
+                  "nestingLevel": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",

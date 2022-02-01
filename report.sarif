@@ -114,7 +114,7 @@
                 }
               ]
             }
-          ],
+          ]
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",

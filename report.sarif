@@ -4,8 +4,8 @@
   "runs" : [ {
     "tool" : {
       "driver" : {
-        "name" : "utbot",
-        "organization" : "huawei",
+        "name" : "UnitTestBot",
+        "organization" : "Huawei",
         "version" : "1.0",
         "rules" : [ {
           "id" : "utbot.unchecked.NullPointerException",
@@ -224,7 +224,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -255.\nTest case: `callCallExample(false, [-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -255.\nTest case: `callCallExample(false, [1], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -253,7 +253,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callCallExample(true, [-255], 128)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callCallExample(true, [1], 128)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -340,7 +340,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `example([-255], 128)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 64.\nTest case: `example([1], 64)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -369,7 +369,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([1], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -427,7 +427,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [1], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -456,7 +456,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [-255], 128)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [1], 128)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {

@@ -50,8 +50,7 @@
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.",
-        "markdown" : "Unchecked exception: `java.lang.NullPointerException`\nTest case: `function(null)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `function(null)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -80,8 +79,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: 128`\nTest case: `function(MainClass$Foo{ {a: [-255]}})`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `function(MainClass$Foo{ {a: [-255]}})`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -110,8 +108,7 @@
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.",
-        "markdown" : "Unchecked exception: `java.lang.NullPointerException`\nTest case: `function(MainClass$Foo{ {a: null}})`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `function(MainClass$Foo{ {a: null}})`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -140,8 +137,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Unchecked exception: `java.lang.ArithmeticException: / by zero`\nTest case: `function(MainClass$Foo{ {a: [-255, 0]}})`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `function(MainClass$Foo{ {a: [-255, 0]}})`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -170,8 +166,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: -256`\nTest case: `function(MainClass$Foo{ {a: [-255]}})`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `function(MainClass$Foo{ {a: [-255]}})`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -200,8 +195,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Unchecked exception: `java.lang.ArithmeticException: / by zero`\nTest case: `callCallExample(false, null, -1)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callCallExample(false, null, -1)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -230,8 +224,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -255.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: -255`\nTest case: `callCallExample(false, [-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -255.\nTest case: `callCallExample(false, [-255], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -260,8 +253,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: 128`\nTest case: `callCallExample(true, [-255], 128)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callCallExample(true, [-255], 128)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -290,8 +282,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Unchecked exception: `java.lang.ArithmeticException: / by zero`\nTest case: `example(null, 0)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `example(null, 0)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -320,8 +311,7 @@
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.",
-        "markdown" : "Unchecked exception: `java.lang.NullPointerException`\nTest case: `example(null, -255)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `example(null, -255)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -350,8 +340,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 64.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: 64`\nTest case: `example([-255], 64)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `example([-255], 128)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -380,8 +369,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: -256`\nTest case: `example([-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([-255], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -410,8 +398,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.",
-        "markdown" : "Unchecked exception: `java.lang.ArithmeticException: / by zero`\nTest case: `callExample(false, null, -1)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callExample(false, null, -1)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -440,8 +427,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: -256`\nTest case: `callExample(true, [-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [-255], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -470,8 +456,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.",
-        "markdown" : "Unchecked exception: `java.lang.ArrayIndexOutOfBoundsException: 128`\nTest case: `callExample(true, [-255], 128)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [-255], 128)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {

@@ -76,62 +76,45 @@
           }
         }
       } ],
-      "codeFlows": [ {
-          "message": {
-            "text": "Tracing the path from user input to insecure usage."
-          },
-          "threadFlows": [ {
-              "locations": [ {
-                  "location": {
-                    "physicalLocation" : {
-                      "artifactLocation" : {
-                        "uri" : "test/MainClassTest.java",
-                        "uriBaseId" : "%SRCROOT%"
-                      },
-                      "region" : {
-                        "startLine" : 64
-                      }
-                    }
-                  },
-                    "message": {
+      "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                         "physicalLocation" : {
+                          "artifactLocation" : {
+                            "uri" : "test/MainClassTest.java",
+                            "uriBaseId" : "%SRCROOT%"
+                          },
+                          "region" : {
+                            "startLine" : 71
+                          }
+                        },
+                        "message": {
                           "text": "Rule has index 0"
                         }
-                }, {
-                  "location": {
-                    "physicalLocation" : {
-                      "artifactLocation" : {
-                        "uri" : "test/MainClassTest.java",
-                        "uriBaseId" : "%SRCROOT%"
-                      },
-                      "region" : {
-                        "startLine" : 65
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation" : {
+                          "artifactLocation" : {
+                            "uri" : "test/MainClassTest.java",
+                            "uriBaseId" : "%SRCROOT%"
+                          },
+                          "region" : {
+                            "startLine" : 75
+                          }
+                        }
                       }
                     }
-                  },
-                    "message": {
-                          "text": "Rule has index 1"
-                        }
-                }, {
-                  "location": {
-                    "physicalLocation" : {
-                      "artifactLocation" : {
-                        "uri" : "test/MainClassTest.java",
-                        "uriBaseId" : "%SRCROOT%"
-                      },
-                      "region" : {
-                        "startLine" : 66
-                      }
-                    }
-                  },
-                    "message": {
-                          "text": "Rule has index 2"
-                        }
+                  ]
                 }
               ]
             }
-          ]
-        }
-      ]
+          ],
     }, {
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",

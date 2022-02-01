@@ -93,12 +93,9 @@
                       }
                     }
                   },
-                  "state": {
-                    "expr": {
-                      "text": "undef"
-                    }
-                  },
-                  "nestingLevel": 0
+                    "message": {
+                          "text": "Rule has index 0"
+                        }
                 }, {
                   "location": {
                     "physicalLocation" : {
@@ -111,12 +108,9 @@
                       }
                     }
                   },
-                  "state": {
-                    "expr": {
-                      "text": "42"
-                    }
-                  },
-                  "nestingLevel": 0
+                    "message": {
+                          "text": "Rule has index 1"
+                        }
                 }, {
                   "location": {
                     "physicalLocation" : {
@@ -129,12 +123,9 @@
                       }
                     }
                   },
-                  "state": {
-                    "raw_input": {
-                      "text": "42"
-                    }
-                  },
-                  "nestingLevel": 1
+                    "message": {
+                          "text": "Rule has index 2"
+                        }
                 }
               ]
             }

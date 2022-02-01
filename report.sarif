@@ -50,7 +50,7 @@
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
-        "text" : "\n- abbb\n- aaab\n - cccc\n\n<ul><li>Coffee</li><li>Tea</li></ul>"
+        "markdown" : "\n- abbb\n- aaab\n - cccc\n\n<ul><li>Coffee</li><li>Tea</li></ul>"
       },
       "locations" : [ {
         "physicalLocation" : {

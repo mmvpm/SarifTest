@@ -82,9 +82,6 @@
           },
           "threadFlows": [ {
               "locations": [ {
-                  "message": {
-                    "text": "The tainted data enters the system here."
-                  },
                   "location": {
                     "physicalLocation" : {
                       "artifactLocation" : {
@@ -121,9 +118,6 @@
                   },
                   "nestingLevel": 0
                 }, {
-                  "message": {
-                    "text": "The tainted data is used insecurely here."
-                  },
                   "location": {
                     "physicalLocation" : {
                       "artifactLocation" : {

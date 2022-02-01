@@ -50,7 +50,7 @@
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `function(null)`\n[Generated test for this case](1)"
+        "text" : "\n- abbb\n- aaab\n - cccc\n\n<ul><li>Coffee</li><li>Tea</li></ul>"
       },
       "locations" : [ {
         "physicalLocation" : {

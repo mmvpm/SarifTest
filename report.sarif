@@ -185,6 +185,12 @@
           }, {
             "location" : {
               "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
                 "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
               },
               "physicalLocation" : {
@@ -324,479 +330,6 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callExample(false, null, -1)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 11
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 217
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "MainClass.example(MainClass.java:18)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "MainClass.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 18
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "MainClass.callExample(MainClass.java:11)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "MainClass.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 11
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [-255], -256)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 9
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 231
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [-255], 128)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 9
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 248
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `example(null, 0)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 18
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 307
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "MainClass.example(MainClass.java:18)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "MainClass.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 18
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.NullPointerException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `example(null, -255)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 19
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 319
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `example([-255], 128)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 19
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 331
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([-255], -256)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 19
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 346
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
         "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callCallExample(false, null, -1)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
@@ -818,7 +351,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 435
+            "startLine" : 222
           }
         }
       } ],
@@ -867,6 +400,12 @@
                 "region" : {
                   "startLine" : 4
                 }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
               }
             }
           }, {
@@ -1002,7 +541,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 447
+            "startLine" : 234
           }
         }
       } ],
@@ -1032,7 +571,492 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 462
+            "startLine" : 249
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `example(null, 0)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 18
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 289
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MainClass.example(MainClass.java:18)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "MainClass.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 18
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "NativeMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 62
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "DelegatingMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 43
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "Method.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 498
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "InvokeInstrumentation.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 61
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "ThreadUtil.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 43
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "ThreadUtil.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 22
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "Thread.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 30
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `example(null, -255)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 19
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 301
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.\nTest case: `example([-255], 32)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 19
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 313
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([-255], -256)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 19
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 328
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callExample(false, null, -1)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 11
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 412
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MainClass.example(MainClass.java:18)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "MainClass.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 18
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "MainClass.callExample(MainClass.java:11)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "MainClass.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 11
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "NativeMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 62
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "DelegatingMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 43
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "Method.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 498
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "InvokeInstrumentation.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 61
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "ThreadUtil.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 43
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "ThreadUtil.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 22
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "Thread.kt",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 30
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [-255], -256)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 426
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [-255], 128)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 443
           }
         }
       } ],

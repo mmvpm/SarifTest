@@ -96,15 +96,6 @@
             "location" : {
               "message" : {
                 "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : -2
-                }
               }
             }
           }, {
@@ -295,15 +286,6 @@
             "location" : {
               "message" : {
                 "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : -2
-                }
               }
             }
           }, {
@@ -554,15 +536,6 @@
             "location" : {
               "message" : {
                 "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : -2
-                }
               }
             }
           }, {
@@ -677,7 +650,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 64.\nTest case: `example([1], 64)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 8.\nTest case: `example([1], 8)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -707,7 +680,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([-255], -256)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `example([1], -256)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -737,96 +710,6 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callExample(false, null, -1)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 11
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 313
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [1], -256)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 9
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 327
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [1], 128)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/MainClass.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 9
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "test/MainClassTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 344
-          }
-        }
-      } ],
-      "codeFlows" : [ ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
         "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callCallExample(false, null, -1)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
@@ -848,7 +731,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 435
+            "startLine" : 318
           }
         }
       } ],
@@ -878,7 +761,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 447
+            "startLine" : 330
           }
         }
       } ],
@@ -908,7 +791,97 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 462
+            "startLine" : 345
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `callExample(false, null, -1)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 11
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 412
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: -256.\nTest case: `callExample(true, [1], -256)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 426
+          }
+        }
+      } ],
+      "codeFlows" : [ ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `callExample(true, [1], 128)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/MainClass.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 9
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "test/MainClassTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 443
           }
         }
       } ],

@@ -83,6 +83,9 @@
                   "locations": [
                     {
                       "location": {
+                      "message": {
+                          "text": "Rule has index 0"
+                        },
                          "physicalLocation" : {
                           "artifactLocation" : {
                             "uri" : "test/MainClassTest.java",
@@ -91,14 +94,14 @@
                           "region" : {
                             "startLine" : 71
                           }
-                        },
-                        "message": {
-                          "text": "Rule has index 0"
                         }
                       }
                     },
                     {
                       "location": {
+                      "message": {
+                          "text": "Rule has index 2"
+                        },
                         "physicalLocation" : {
                           "artifactLocation" : {
                             "uri" : "test/MainClassTest.java",

@@ -185,6 +185,21 @@
           }, {
             "location" : {
               "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "NativeMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
                 "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
               },
               "physicalLocation" : {
@@ -378,6 +393,21 @@
                 },
                 "region" : {
                   "startLine" : 11
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "NativeMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1
                 }
               }
             }
@@ -628,6 +658,21 @@
           }, {
             "location" : {
               "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "NativeMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
                 "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
               },
               "physicalLocation" : {
@@ -836,6 +881,21 @@
                 },
                 "region" : {
                   "startLine" : 18
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "NativeMethodAccessorImpl.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 1
                 }
               }
             }

@@ -80,7 +80,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "Main.trace1(Main.java:4)"
+                "text" : "[some text](1)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {

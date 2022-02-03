@@ -166,6 +166,9 @@
         }
       } ],
       "codeFlows" : [ {
+        "message" : {
+          "text" : "codeFlow text"
+        },
         "threadFlows" : [ {
           "locations" : [ {
             "location" : {

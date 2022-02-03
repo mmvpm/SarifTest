@@ -33,6 +33,14 @@ public class MainClass {
         return 1 / foo.a[Foo.n];
     }
 
+    public int utilSqrt(boolean condition) {
+        Util util = new Util();
+        if (condition)
+            return util.utilFunction(0);
+        else
+            return util.utilFunction(100000);
+    }
+
     public static void main(String[] args) {
         System.out.println(1);
     }

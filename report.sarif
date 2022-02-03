@@ -59,7 +59,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 36
+            "startLine" : 33
           }
         }
       } ],
@@ -89,7 +89,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 36
+            "startLine" : 33
           }
         }
       } ],
@@ -119,7 +119,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 36
+            "startLine" : 33
           }
         }
       } ],
@@ -149,7 +149,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 36
+            "startLine" : 33
           }
         }
       } ],
@@ -166,142 +166,19 @@
         }
       } ],
       "codeFlows" : [ {
-        "message" : {
-          "text" : "codeFlow text"
-        },
         "threadFlows" : [ {
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MainClass.function(MainClass.java:36)"
+                "text" : "MainClass.function(MainClass.java:33)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 36
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 1
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
+                  "startLine" : 33
                 }
               }
             }
@@ -321,7 +198,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 36
+            "startLine" : 33
           }
         }
       } ],
@@ -351,7 +228,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 7
+            "startLine" : 4
           }
         }
       } ],
@@ -363,7 +240,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 222
+            "startLine" : 221
           }
         }
       } ],
@@ -372,165 +249,45 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MainClass.example(MainClass.java:21)"
+                "text" : "MainClass.example(MainClass.java:18)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 21
+                  "startLine" : 18
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "MainClass.callExample(MainClass.java:14)"
+                "text" : "MainClass.callExample(MainClass.java:11)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 14
+                  "startLine" : 11
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "MainClass.callCallExample(MainClass.java:7)"
+                "text" : "MainClass.callCallExample(MainClass.java:4)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 7
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 1
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
+                  "startLine" : 4
                 }
               }
             }
@@ -550,7 +307,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 7
+            "startLine" : 4
           }
         }
       } ],
@@ -562,7 +319,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 234
+            "startLine" : 233
           }
         }
       } ],
@@ -580,7 +337,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 7
+            "startLine" : 4
           }
         }
       } ],
@@ -592,7 +349,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 249
+            "startLine" : 248
           }
         }
       } ],
@@ -610,7 +367,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 14
+            "startLine" : 11
           }
         }
       } ],
@@ -622,7 +379,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 316
+            "startLine" : 315
           }
         }
       } ],
@@ -631,150 +388,30 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MainClass.example(MainClass.java:21)"
+                "text" : "MainClass.example(MainClass.java:18)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 21
+                  "startLine" : 18
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "MainClass.callExample(MainClass.java:14)"
+                "text" : "MainClass.callExample(MainClass.java:11)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 14
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 1
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
+                  "startLine" : 11
                 }
               }
             }
@@ -794,7 +431,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 12
+            "startLine" : 9
           }
         }
       } ],
@@ -806,7 +443,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 330
+            "startLine" : 329
           }
         }
       } ],
@@ -824,7 +461,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 12
+            "startLine" : 9
           }
         }
       } ],
@@ -836,7 +473,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 347
+            "startLine" : 346
           }
         }
       } ],
@@ -854,7 +491,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 21
+            "startLine" : 18
           }
         }
       } ],
@@ -866,7 +503,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 406
+            "startLine" : 405
           }
         }
       } ],
@@ -875,135 +512,15 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MainClass.example(MainClass.java:21)"
+                "text" : "MainClass.example(MainClass.java:18)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 21
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 1
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
+                  "startLine" : 18
                 }
               }
             }
@@ -1023,7 +540,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 22
+            "startLine" : 19
           }
         }
       } ],
@@ -1035,7 +552,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 418
+            "startLine" : 417
           }
         }
       } ],
@@ -1044,7 +561,7 @@
       "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.\nTest case: `example([-255], 32)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 128.\nTest case: `example([-255], 128)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -1053,7 +570,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 22
+            "startLine" : 19
           }
         }
       } ],
@@ -1065,7 +582,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 430
+            "startLine" : 429
           }
         }
       } ],
@@ -1083,7 +600,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 22
+            "startLine" : 19
           }
         }
       } ],
@@ -1095,7 +612,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 445
+            "startLine" : 444
           }
         }
       } ],
@@ -1104,7 +621,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `utilSqrt(0)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: integer overflow.\nTest case: `utilSqrt(false)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -1125,7 +642,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 502
+            "startLine" : 505
           }
         }
       } ],
@@ -1134,11 +651,26 @@
           "locations" : [ {
             "location" : {
               "message" : {
+                "text" : "java.lang.Math.multiplyExact(Math.java:867)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/java/lang/Math.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 867
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
                 "text" : "Util.utilFunction(Util.java:3)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "Util.java",
+                  "uri" : "src/Util.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
@@ -1153,131 +685,11 @@
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "MainClass.java",
+                  "uri" : "src/MainClass.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
                   "startLine" : 41
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 1
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "NativeMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 62
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "DelegatingMethodAccessorImpl.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "java.lang.reflect.Method.invoke(Method.java:498)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Method.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 498
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.instrumentation.instrumentation.InvokeInstrumentation$invoke$$inlined$run$lambda$1.invoke(InvokeInstrumentation.kt:61)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "InvokeInstrumentation.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 61
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:43)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 43
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.huawei.utbot.common.ThreadBasedExecutor$invokeWithTimeout$1.invoke(ThreadUtil.kt:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "ThreadUtil.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "kotlin.concurrent.ThreadsKt$thread$thread$1.run(Thread.kt:30)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "Thread.kt",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 30
                 }
               }
             }

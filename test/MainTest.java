@@ -18,41 +18,6 @@ public class MainTest {
     }
     ///endregion
     
-    ///region SUCCESSFUL EXECUTIONS for method trace1(int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Util::trace2 once
- * returns from: {@code return Util.trace2(a); }
- * </pre>
-     */
-    @Test(timeout = 10000)
-    //@org.junit.jupiter.api.DisplayName("trace1: UtilTrace2 -> return Util.trace2(a)")
-    public void testTrace1_UtilTrace2() throws Throwable  {
-        int actual = Main.trace1(-255);
-        
-        assertEquals(258064, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method trace1(int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Util::trace2 once
- * 
- * throws ArithmeticException in: return Util.trace2(a);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = Throwable.class)
-    //@org.junit.jupiter.api.DisplayName("trace1: return Util.trace2(a) : True -> ThrowArithmeticException")
-    public void testTrace1_UtilTrace2_1() throws Throwable  {
-        Main.trace1(-423886983);
-    }
-    ///endregion
-    
     ///region SUCCESSFUL EXECUTIONS for method getByIndex(int[], int)
     
     /**
@@ -66,12 +31,12 @@ public class MainTest {
     //@org.junit.jupiter.api.DisplayName("getByIndex: index == -2 : False -> return array[index] + tmp")
     public void testGetByIndex_IndexNotEqualsNegative2() throws Throwable  {
         int[] intArray = new int[2];
-        intArray[0] = 1;
-        intArray[1] = 1;
+        intArray[0] = -255;
+        intArray[1] = -255;
         
         int actual = Main.getByIndex(intArray, 1);
         
-        assertEquals(2, actual);
+        assertEquals(-254, actual);
     }
     ///endregion
     
@@ -111,9 +76,9 @@ public class MainTest {
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testGetByIndex_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
-        Main.getByIndex(intArray, 128);
+        Main.getByIndex(intArray, 16);
     }
     
     /**
@@ -126,7 +91,7 @@ public class MainTest {
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testGetByIndex_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
         Main.getByIndex(intArray, -256);
     }
@@ -146,6 +111,41 @@ public class MainTest {
     //@org.junit.jupiter.api.DisplayName("getByIndex: index == -2 -> ThrowRuntimeException")
     public void testGetByIndex_IndexEqualsNegative2() throws Throwable  {
         Main.getByIndex(null, -2);
+    }
+    ///endregion
+    
+    ///region SUCCESSFUL EXECUTIONS for method trace1(int)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Util::trace2 once
+ * returns from: {@code return Util.trace2(a); }
+ * </pre>
+     */
+    @Test(timeout = 10000)
+    //@org.junit.jupiter.api.DisplayName("trace1: UtilTrace2 -> return Util.trace2(a)")
+    public void testTrace1_UtilTrace2() throws Throwable  {
+        int actual = Main.trace1(128);
+        
+        assertEquals(66564, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method trace1(int)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Util::trace2 once
+ * 
+ * throws ArithmeticException in: return Util.trace2(a);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = Throwable.class)
+    //@org.junit.jupiter.api.DisplayName("trace1: return Util.trace2(a) : True -> ThrowArithmeticException")
+    public void testTrace1_UtilTrace2_1() throws Throwable  {
+        Main.trace1(1073741824);
     }
     ///endregion
     

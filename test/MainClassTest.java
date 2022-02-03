@@ -166,12 +166,12 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("callCallExample: -> return callExample(condition, a, i)")
     public void testCallCallExample_ReturnCallExample() throws Throwable  {
         int[] intArray = new int[2];
-        intArray[0] = 1;
-        intArray[1] = 1;
+        intArray[0] = -255;
+        intArray[1] = -255;
         
         int actual = MainClass.callCallExample(true, intArray, 1);
         
-        assertEquals(2, actual);
+        assertEquals(-254, actual);
     }
     
     /**
@@ -183,7 +183,6 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("callCallExample: -> return callExample(condition, a, i)")
     public void testCallCallExample_ReturnCallExample_1() throws Throwable  {
         int[] intArray = new int[2];
-        intArray[0] = -255;
         intArray[1] = -255;
         
         int actual = MainClass.callCallExample(false, intArray, 0);
@@ -233,7 +232,7 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("callCallExample: return callExample(condition, a, i) : True -> ThrowArrayIndexOutOfBoundsException")
     public void testCallCallExample_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
         MainClass.callCallExample(false, intArray, -256);
     }
@@ -248,9 +247,126 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("callCallExample: return callExample(condition, a, i) : True -> ThrowArrayIndexOutOfBoundsException")
     public void testCallCallExample_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
         MainClass.callCallExample(true, intArray, 128);
+    }
+    ///endregion
+    
+    ///region SUCCESSFUL EXECUTIONS for method callExample(boolean, int[], int)
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): True }
+ * invokes:
+ *     MainClass::example once
+ * returns from: {@code return example(a, i); }
+ * </pre>
+     */
+    @Test(timeout = 10000)
+    //@org.junit.jupiter.api.DisplayName("callExample: condition : True -> return example(a, i)")
+    public void testCallExample_Condition() throws Throwable  {
+        int[] intArray = new int[2];
+        intArray[0] = -255;
+        intArray[1] = -255;
+        
+        int actual = MainClass.callExample(true, intArray, 1);
+        
+        assertEquals(-254, actual);
+    }
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): False }
+ * invokes:
+ *     MainClass::example once
+ * returns from: {@code return example(a, i + 1); }
+ * </pre>
+     */
+    @Test(timeout = 10000)
+    //@org.junit.jupiter.api.DisplayName("callExample: condition : False -> return example(a, i + 1)")
+    public void testCallExample_NotCondition() throws Throwable  {
+        int[] intArray = new int[2];
+        intArray[0] = 1;
+        intArray[1] = -255;
+        
+        int actual = MainClass.callExample(false, intArray, 0);
+        
+        assertEquals(-254, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method callExample(boolean, int[], int)
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): False }
+ * invokes:
+ *     MainClass::example once
+ * 
+ * throws ArithmeticException in: return example(a, i + 1);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = Throwable.class)
+    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i + 1) : True -> ThrowArithmeticException")
+    public void testCallExample_NotCondition_1() throws Throwable  {
+        MainClass.callExample(false, null, -1);
+    }
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): True }
+ * 
+ * throws ArrayIndexOutOfBoundsException in: return example(a, i);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = Throwable.class)
+    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i) : True -> ThrowArrayIndexOutOfBoundsException")
+    public void testCallExample_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
+        int[] intArray = new int[1];
+        intArray[0] = -255;
+        
+        MainClass.callExample(true, intArray, -256);
+    }
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): True }
+ * 
+ * throws ArrayIndexOutOfBoundsException in: return example(a, i);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = Throwable.class)
+    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i) : True -> ThrowArrayIndexOutOfBoundsException")
+    public void testCallExample_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
+        int[] intArray = new int[1];
+        intArray[0] = -255;
+        
+        MainClass.callExample(true, intArray, 128);
+    }
+    ///endregion
+    
+    ///region EXPLICITLY THROWN UNCHECKED EXCEPTIONS for method callExample(boolean, int[], int)
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): True }
+ * invokes:
+ *     MainClass::example once
+ * 
+ * throws RuntimeException in: return example(a, i);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = Throwable.class)
+    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i) : True -> ThrowRuntimeException")
+    public void testCallExample_Condition_1() throws Throwable  {
+        MainClass.callExample(true, null, -2);
     }
     ///endregion
     
@@ -267,12 +383,12 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("example: i == -2 : False -> return a[i] + tmp")
     public void testExample_INotEqualsNegative2() throws Throwable  {
         int[] intArray = new int[2];
-        intArray[0] = 1;
-        intArray[1] = 1;
+        intArray[0] = -255;
+        intArray[1] = -255;
         
         int actual = MainClass.example(intArray, 1);
         
-        assertEquals(2, actual);
+        assertEquals(-254, actual);
     }
     ///endregion
     
@@ -312,9 +428,9 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("example: return a[i] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testExample_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
-        MainClass.example(intArray, 64);
+        MainClass.example(intArray, 128);
     }
     
     /**
@@ -327,7 +443,7 @@ public class MainClassTest {
     //@org.junit.jupiter.api.DisplayName("example: return a[i] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testExample_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
         MainClass.example(intArray, -256);
     }
@@ -350,120 +466,46 @@ public class MainClassTest {
     }
     ///endregion
     
-    ///region SUCCESSFUL EXECUTIONS for method callExample(boolean, int[], int)
+    ///region SUCCESSFUL EXECUTIONS for method utilSqrt(boolean)
     
     /**
     <pre>
     Test executes conditions:
  *     {@code (condition): True }
  * invokes:
- *     MainClass::example once
- * returns from: {@code return example(a, i); }
+ *     Util::utilFunction once
+ * returns from: {@code return util.utilFunction(0); }
  * </pre>
      */
     @Test(timeout = 10000)
-    //@org.junit.jupiter.api.DisplayName("callExample: condition : True -> return example(a, i)")
-    public void testCallExample_Condition() throws Throwable  {
-        int[] intArray = new int[2];
-        intArray[0] = 1;
-        intArray[1] = 1;
+    //@org.junit.jupiter.api.DisplayName("utilSqrt: condition : True -> return util.utilFunction(0)")
+    public void testUtilSqrt_Condition() throws Throwable  {
+        MainClass mainClass = new MainClass();
         
-        int actual = MainClass.callExample(true, intArray, 1);
+        int actual = mainClass.utilSqrt(true);
         
-        assertEquals(2, actual);
+        assertEquals(0, actual);
     }
+    ///endregion
+    
+    ///region ERROR SUITE for method utilSqrt(boolean)
     
     /**
     <pre>
     Test executes conditions:
  *     {@code (condition): False }
  * invokes:
- *     MainClass::example once
- * returns from: {@code return example(a, i + 1); }
- * </pre>
-     */
-    @Test(timeout = 10000)
-    //@org.junit.jupiter.api.DisplayName("callExample: condition : False -> return example(a, i + 1)")
-    public void testCallExample_NotCondition() throws Throwable  {
-        int[] intArray = new int[2];
-        intArray[0] = -255;
-        intArray[1] = -255;
-        
-        int actual = MainClass.callExample(false, intArray, 0);
-        
-        assertEquals(-254, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method callExample(boolean, int[], int)
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): False }
- * invokes:
- *     MainClass::example once
+ *     Util::utilFunction once
  * 
- * throws ArithmeticException in: return example(a, i + 1);
+ * throws ArithmeticException in: return util.utilFunction(100000);
  * </pre>
      */
     @Test(timeout = 10000, expected = Throwable.class)
-    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i + 1) : True -> ThrowArithmeticException")
-    public void testCallExample_NotCondition_1() throws Throwable  {
-        MainClass.callExample(false, null, -1);
-    }
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): True }
- * 
- * throws ArrayIndexOutOfBoundsException in: return example(a, i);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = Throwable.class)
-    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i) : True -> ThrowArrayIndexOutOfBoundsException")
-    public void testCallExample_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
-        int[] intArray = new int[1];
-        intArray[0] = 1;
+    //@org.junit.jupiter.api.DisplayName("utilSqrt: return util.utilFunction(100000) : True -> ThrowArithmeticException")
+    public void testUtilSqrt_NotCondition() throws Throwable  {
+        MainClass mainClass = new MainClass();
         
-        MainClass.callExample(true, intArray, -256);
-    }
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): True }
- * 
- * throws ArrayIndexOutOfBoundsException in: return example(a, i);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = Throwable.class)
-    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i) : True -> ThrowArrayIndexOutOfBoundsException")
-    public void testCallExample_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
-        int[] intArray = new int[1];
-        intArray[0] = 1;
-        
-        MainClass.callExample(true, intArray, 128);
-    }
-    ///endregion
-    
-    ///region EXPLICITLY THROWN UNCHECKED EXCEPTIONS for method callExample(boolean, int[], int)
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): True }
- * invokes:
- *     MainClass::example once
- * 
- * throws RuntimeException in: return example(a, i);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = Throwable.class)
-    //@org.junit.jupiter.api.DisplayName("callExample: return example(a, i) : True -> ThrowRuntimeException")
-    public void testCallExample_Condition_1() throws Throwable  {
-        MainClass.callExample(true, null, -2);
+        mainClass.utilSqrt(false);
     }
     ///endregion
     

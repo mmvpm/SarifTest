@@ -1,4 +1,7 @@
+package com.abc.qwerty;
+
 import org.junit.Test;
+import com.cba.ytrewq.Util;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,6 +21,81 @@ public class MainTest {
     }
     ///endregion
     
+    ///region SUCCESSFUL EXECUTIONS for method example(com.cba.ytrewq.Util, boolean)
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): True }
+ * invokes:
+ *     Util::multiply once
+ * returns from: {@code return util.multiply(0); }
+ * </pre>
+     */
+    @Test(timeout = 10000)
+    //@org.junit.jupiter.api.DisplayName("example: condition : True -> return util.multiply(0)")
+    public void testExample_Condition() throws Throwable  {
+        Util util = new Util();
+        
+        int actual = Main.example(util, true);
+        
+        assertEquals(0, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method example(com.cba.ytrewq.Util, boolean)
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): True }
+ * invokes:
+ *     Util::multiply once
+ * 
+ * throws NullPointerException in: return util.multiply(0);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = NullPointerException.class)
+    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(0) : True -> ThrowNullPointerException")
+    public void testExample_Condition_1() throws Throwable  {
+        Main.example(null, true);
+    }
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): False }
+ * invokes:
+ *     Util::multiply once
+ * 
+ * throws NullPointerException in: return util.multiply(100000);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = NullPointerException.class)
+    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(100000) : True -> ThrowNullPointerException")
+    public void testExample_UtilMultiply() throws Throwable  {
+        Main.example(null, false);
+    }
+    
+    /**
+    <pre>
+    Test executes conditions:
+ *     {@code (condition): False }
+ * invokes:
+ *     Util::multiply once
+ * 
+ * throws ArithmeticException in: return util.multiply(100000);
+ * </pre>
+     */
+    @Test(timeout = 10000, expected = ArithmeticException.class)
+    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(100000) : True -> ThrowArithmeticException")
+    public void testExample_UtilMultiply_1() throws Throwable  {
+        Util util = new Util();
+        
+        Main.example(util, false);
+    }
+    ///endregion
+    
     ///region SUCCESSFUL EXECUTIONS for method getByIndex(int[], int)
     
     /**
@@ -31,12 +109,12 @@ public class MainTest {
     //@org.junit.jupiter.api.DisplayName("getByIndex: index == -2 : False -> return array[index] + tmp")
     public void testGetByIndex_IndexNotEqualsNegative2() throws Throwable  {
         int[] intArray = new int[2];
-        intArray[0] = -255;
-        intArray[1] = -255;
+        intArray[0] = 1;
+        intArray[1] = 1;
         
         int actual = Main.getByIndex(intArray, 1);
         
-        assertEquals(-254, actual);
+        assertEquals(2, actual);
     }
     ///endregion
     
@@ -48,7 +126,7 @@ public class MainTest {
  * throws ArithmeticException in: int tmp = 1 / index;
  * </pre>
      */
-    @Test(timeout = 10000, expected = Throwable.class)
+    @Test(timeout = 10000, expected = ArithmeticException.class)
     //@org.junit.jupiter.api.DisplayName("getByIndex: tmp = 1 / index : True -> ThrowArithmeticException")
     public void testGetByIndex_ThrowArithmeticException() throws Throwable  {
         Main.getByIndex(null, 0);
@@ -60,7 +138,7 @@ public class MainTest {
  * throws NullPointerException in: return array[index] + tmp;
  * </pre>
      */
-    @Test(timeout = 10000, expected = Throwable.class)
+    @Test(timeout = 10000, expected = NullPointerException.class)
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowNullPointerException")
     public void testGetByIndex_ThrowNullPointerException() throws Throwable  {
         Main.getByIndex(null, -255);
@@ -72,13 +150,13 @@ public class MainTest {
  * throws ArrayIndexOutOfBoundsException in: return array[index] + tmp;
  * </pre>
      */
-    @Test(timeout = 10000, expected = Throwable.class)
+    @Test(timeout = 10000, expected = ArrayIndexOutOfBoundsException.class)
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testGetByIndex_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = -255;
+        intArray[0] = 1;
         
-        Main.getByIndex(intArray, 16);
+        Main.getByIndex(intArray, 128);
     }
     
     /**
@@ -87,11 +165,11 @@ public class MainTest {
  * throws ArrayIndexOutOfBoundsException in: return array[index] + tmp;
  * </pre>
      */
-    @Test(timeout = 10000, expected = Throwable.class)
+    @Test(timeout = 10000, expected = ArrayIndexOutOfBoundsException.class)
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testGetByIndex_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = -255;
+        intArray[0] = 1;
         
         Main.getByIndex(intArray, -256);
     }
@@ -107,45 +185,10 @@ public class MainTest {
  * throws RuntimeException after condition: index == -2
  * </pre>
      */
-    @Test(timeout = 10000, expected = Throwable.class)
+    @Test(timeout = 10000, expected = RuntimeException.class)
     //@org.junit.jupiter.api.DisplayName("getByIndex: index == -2 -> ThrowRuntimeException")
     public void testGetByIndex_IndexEqualsNegative2() throws Throwable  {
         Main.getByIndex(null, -2);
-    }
-    ///endregion
-    
-    ///region SUCCESSFUL EXECUTIONS for method trace1(int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Util::trace2 once
- * returns from: {@code return Util.trace2(a); }
- * </pre>
-     */
-    @Test(timeout = 10000)
-    //@org.junit.jupiter.api.DisplayName("trace1: UtilTrace2 -> return Util.trace2(a)")
-    public void testTrace1_UtilTrace2() throws Throwable  {
-        int actual = Main.trace1(128);
-        
-        assertEquals(66564, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method trace1(int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Util::trace2 once
- * 
- * throws ArithmeticException in: return Util.trace2(a);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = Throwable.class)
-    //@org.junit.jupiter.api.DisplayName("trace1: return Util.trace2(a) : True -> ThrowArithmeticException")
-    public void testTrace1_UtilTrace2_1() throws Throwable  {
-        Main.trace1(1073741824);
     }
     ///endregion
     

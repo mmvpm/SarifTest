@@ -1,7 +1,14 @@
+package com.abc.qwerty;
+
+import com.cba.ytrewq.Util;
+
 public class Main {
 
-    public static int trace1(int a) {
-        return Util.trace2(a);
+    public static int example(Util util, boolean condition) {
+        if (condition)
+            return util.multiply(0);
+        else
+            return util.multiply(100000);
     }
 
     public static int getByIndex(int[] array, int index) {

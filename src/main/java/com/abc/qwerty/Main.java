@@ -4,11 +4,20 @@ import com.cba.ytrewq.Util;
 
 public class Main {
 
-    public static int example(Util util, boolean condition) {
-        if (condition)
-            return util.multiply(0);
-        else
-            return util.multiply(100000);
+    public enum Number {
+        ZERO,
+        NONZERO
+    }
+
+    public static int example(Util util, Number condition) {
+        switch (condition) {
+            case ZERO:
+                return util.multiply(0);
+            case NONZERO:
+                return util.multiply(100000);
+            default:
+                return 0;
+        }
     }
 
     public static int getByIndex(int[] array, int index) {

@@ -2,6 +2,7 @@ package com.abc.qwerty;
 
 import org.junit.Test;
 import com.cba.ytrewq.Util;
+import com.abc.qwerty.Main.Number;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,85 +15,10 @@ public class MainTest {
  * } }
  * </pre>
      */
-    @Test(timeout = 10000)
+    @Test
     //@org.junit.jupiter.api.DisplayName("main: -> public static void main(String[] args) { }")
     public void testMain_Return() throws Throwable  {
         Main.main(null);
-    }
-    ///endregion
-    
-    ///region SUCCESSFUL EXECUTIONS for method example(com.cba.ytrewq.Util, boolean)
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): True }
- * invokes:
- *     Util::multiply once
- * returns from: {@code return util.multiply(0); }
- * </pre>
-     */
-    @Test(timeout = 10000)
-    //@org.junit.jupiter.api.DisplayName("example: condition : True -> return util.multiply(0)")
-    public void testExample_Condition() throws Throwable  {
-        Util util = new Util();
-        
-        int actual = Main.example(util, true);
-        
-        assertEquals(0, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method example(com.cba.ytrewq.Util, boolean)
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): True }
- * invokes:
- *     Util::multiply once
- * 
- * throws NullPointerException in: return util.multiply(0);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = NullPointerException.class)
-    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(0) : True -> ThrowNullPointerException")
-    public void testExample_Condition_1() throws Throwable  {
-        Main.example(null, true);
-    }
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): False }
- * invokes:
- *     Util::multiply once
- * 
- * throws NullPointerException in: return util.multiply(100000);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = NullPointerException.class)
-    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(100000) : True -> ThrowNullPointerException")
-    public void testExample_UtilMultiply() throws Throwable  {
-        Main.example(null, false);
-    }
-    
-    /**
-    <pre>
-    Test executes conditions:
- *     {@code (condition): False }
- * invokes:
- *     Util::multiply once
- * 
- * throws ArithmeticException in: return util.multiply(100000);
- * </pre>
-     */
-    @Test(timeout = 10000, expected = ArithmeticException.class)
-    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(100000) : True -> ThrowArithmeticException")
-    public void testExample_UtilMultiply_1() throws Throwable  {
-        Util util = new Util();
-        
-        Main.example(util, false);
     }
     ///endregion
     
@@ -105,16 +31,16 @@ public class MainTest {
  * returns from: {@code return array[index] + tmp; }
  * </pre>
      */
-    @Test(timeout = 10000)
+    @Test
     //@org.junit.jupiter.api.DisplayName("getByIndex: index == -2 : False -> return array[index] + tmp")
     public void testGetByIndex_IndexNotEqualsNegative2() throws Throwable  {
         int[] intArray = new int[2];
-        intArray[0] = 1;
-        intArray[1] = 1;
+        intArray[0] = -255;
+        intArray[1] = -255;
         
         int actual = Main.getByIndex(intArray, 1);
         
-        assertEquals(2, actual);
+        assertEquals(-254, actual);
     }
     ///endregion
     
@@ -126,9 +52,11 @@ public class MainTest {
  * throws ArithmeticException in: int tmp = 1 / index;
  * </pre>
      */
-    @Test(timeout = 10000, expected = ArithmeticException.class)
+    @Test
     //@org.junit.jupiter.api.DisplayName("getByIndex: tmp = 1 / index : True -> ThrowArithmeticException")
     public void testGetByIndex_ThrowArithmeticException() throws Throwable  {
+        /* This test fails because executable under testing com.abc.qwerty.Main.getByIndex
+         produces Runtime exception java.lang.ArithmeticException: / by zero */
         Main.getByIndex(null, 0);
     }
     
@@ -138,9 +66,11 @@ public class MainTest {
  * throws NullPointerException in: return array[index] + tmp;
  * </pre>
      */
-    @Test(timeout = 10000, expected = NullPointerException.class)
+    @Test
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowNullPointerException")
     public void testGetByIndex_ThrowNullPointerException() throws Throwable  {
+        /* This test fails because executable under testing com.abc.qwerty.Main.getByIndex
+         produces Runtime exception java.lang.NullPointerException */
         Main.getByIndex(null, -255);
     }
     
@@ -150,12 +80,14 @@ public class MainTest {
  * throws ArrayIndexOutOfBoundsException in: return array[index] + tmp;
  * </pre>
      */
-    @Test(timeout = 10000, expected = ArrayIndexOutOfBoundsException.class)
+    @Test
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testGetByIndex_ThrowArrayIndexOutOfBoundsException() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
+        /* This test fails because executable under testing com.abc.qwerty.Main.getByIndex
+         produces Runtime exception java.lang.ArrayIndexOutOfBoundsException: 128 */
         Main.getByIndex(intArray, 128);
     }
     
@@ -165,12 +97,14 @@ public class MainTest {
  * throws ArrayIndexOutOfBoundsException in: return array[index] + tmp;
  * </pre>
      */
-    @Test(timeout = 10000, expected = ArrayIndexOutOfBoundsException.class)
+    @Test
     //@org.junit.jupiter.api.DisplayName("getByIndex: return array[index] + tmp : True -> ThrowArrayIndexOutOfBoundsException")
     public void testGetByIndex_ThrowArrayIndexOutOfBoundsException_1() throws Throwable  {
         int[] intArray = new int[1];
-        intArray[0] = 1;
+        intArray[0] = -255;
         
+        /* This test fails because executable under testing com.abc.qwerty.Main.getByIndex
+         produces Runtime exception java.lang.ArrayIndexOutOfBoundsException: -256 */
         Main.getByIndex(intArray, -256);
     }
     ///endregion
@@ -185,10 +119,96 @@ public class MainTest {
  * throws RuntimeException after condition: index == -2
  * </pre>
      */
-    @Test(timeout = 10000, expected = RuntimeException.class)
+    @Test
     //@org.junit.jupiter.api.DisplayName("getByIndex: index == -2 -> ThrowRuntimeException")
     public void testGetByIndex_IndexEqualsNegative2() throws Throwable  {
+        /* This test fails because executable under testing com.abc.qwerty.Main.getByIndex
+         produces Runtime exception java.lang.RuntimeException */
         Main.getByIndex(null, -2);
+    }
+    ///endregion
+    
+    ///region SUCCESSFUL EXECUTIONS for method example(com.cba.ytrewq.Util, com.abc.qwerty.Main.Number)
+    
+    /**
+      */
+    @Test
+    //@org.junit.jupiter.api.DisplayName("example: ")
+    public void testExample() throws Throwable  {
+        Util util = new Util();
+        Main.Number number = Main.Number.ZERO;
+        
+        int actual = Main.example(util, number);
+        
+        assertEquals(0, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method example(com.cba.ytrewq.Util, com.abc.qwerty.Main.Number)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Main$Number::ordinal once
+ * 
+ * throws NullPointerException in: condition
+ * </pre>
+     */
+    @Test
+    //@org.junit.jupiter.api.DisplayName("example: switch(condition) case:  -> ThrowNullPointerException")
+    public void testExample_MainOrdinal() throws Throwable  {
+        /* This test fails because executable under testing com.abc.qwerty.Main.example
+         produces Runtime exception java.lang.NullPointerException */
+        Main.example(null, null);
+    }
+    
+    /**
+    <pre>
+    Test 
+ * throws NullPointerException in: return util.multiply(100000);
+ * </pre>
+     */
+    @Test
+    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(100000) : True -> ThrowNullPointerException")
+    public void testExample_ThrowNullPointerException() throws Throwable  {
+        Main.Number number = Main.Number.NONZERO;
+        
+        /* This test fails because executable under testing com.abc.qwerty.Main.example
+         produces Runtime exception java.lang.NullPointerException */
+        Main.example(null, number);
+    }
+    
+    /**
+    <pre>
+    Test 
+ * throws NullPointerException in: return util.multiply(0);
+ * </pre>
+     */
+    @Test
+    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(0) : True -> ThrowNullPointerException")
+    public void testExample_ThrowNullPointerException_1() throws Throwable  {
+        Main.Number number = Main.Number.ZERO;
+        
+        /* This test fails because executable under testing com.abc.qwerty.Main.example
+         produces Runtime exception java.lang.NullPointerException */
+        Main.example(null, number);
+    }
+    
+    /**
+    <pre>
+    Test 
+ * throws ArithmeticException in: return util.multiply(100000);
+ * </pre>
+     */
+    @Test
+    //@org.junit.jupiter.api.DisplayName("example: return util.multiply(100000) : True -> ThrowArithmeticException")
+    public void testExample_ThrowArithmeticException() throws Throwable  {
+        Util util = new Util();
+        Main.Number number = Main.Number.NONZERO;
+        
+        /* This test fails because executable under testing com.abc.qwerty.Main.example
+         produces Runtime exception java.lang.ArithmeticException: integer overflow */
+        Main.example(util, number);
     }
     ///endregion
     

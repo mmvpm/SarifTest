@@ -1,0 +1,91 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "Huawei",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Unchecked ArithmeticException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `getByIndex(null, 0)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/abc/qwerty/Main.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 26
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 25
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MainTest.java:28"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 28
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.abc.qwerty.Main.getByIndex(Main.java:26)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/abc/qwerty/Main.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 26
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

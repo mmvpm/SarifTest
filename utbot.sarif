@@ -8,18 +8,6 @@
         "organization" : "Huawei",
         "version" : "1.0",
         "rules" : [ {
-          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
-          "name" : "ArrayIndexOutOfBoundsException",
-          "shortDescription" : {
-            "text" : "Unchecked ArrayIndexOutOfBoundsException detected."
-          },
-          "fullDescription" : {
-            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
-          },
-          "help" : {
-            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html"
-          }
-        }, {
           "id" : "utbot.unchecked.NullPointerException",
           "name" : "NullPointerException",
           "shortDescription" : {
@@ -31,7 +19,209 @@
           "help" : {
             "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
           }
-        }, {
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `add(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 42
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "build/generated/test/com/abc/qwerty/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 63
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:69"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "build/generated/test/com/abc/qwerty/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 69
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.abc.qwerty.MyLinkedList.add(MyLinkedList.java:42)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 42
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `asString(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 55
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "build/generated/test/com/abc/qwerty/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 184
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "com.abc.qwerty.MyLinkedList.asString(MyLinkedList.java:55)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 55
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `reverseRecursively()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 85
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "build/generated/test/com/abc/qwerty/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 358
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:365"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "build/generated/test/com/abc/qwerty/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 365
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.abc.qwerty.MyLinkedList.reverseRecursively(MyLinkedList.java:85)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 85
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.abc.qwerty.MyLinkedList.recurrentStep(MyLinkedList.java:91)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 91
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "Huawei",
+        "version" : "1.0",
+        "rules" : [ {
           "id" : "utbot.unchecked.ArithmeticException",
           "name" : "ArithmeticException",
           "shortDescription" : {
@@ -47,15 +237,125 @@
       }
     },
     "results" : [ {
-      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+      "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0.\nTest case: `getByIndex([], 16)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `foo(0)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/main/java/com/abc/qwerty/Example.java",
+            "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 20
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "build/generated/test/com/abc/qwerty/NodeTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 121
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "NodeTest.java:126"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "build/generated/test/com/abc/qwerty/NodeTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 126
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.abc.qwerty.Node.foo(MyLinkedList.java:20)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/abc/qwerty/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 20
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "Huawei",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Unchecked ArithmeticException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
+          }
+        }, {
+          "id" : "utbot.unchecked.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unchecked NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        }, {
+          "id" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
+          "name" : "ArrayIndexOutOfBoundsException",
+          "shortDescription" : {
+            "text" : "Unchecked ArrayIndexOutOfBoundsException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArrayIndexOutOfBoundsException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `myFunction(null, 0)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/abc/qwerty/Main.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
@@ -67,7 +367,7 @@
         "id" : 1,
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/test/java/com/abc/qwerty/ExampleTest.java",
+            "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
@@ -80,26 +380,26 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "ExampleTest.java:49"
+                "text" : "MainTest.java:46"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "src/test/java/com/abc/qwerty/ExampleTest.java",
+                  "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 49
+                  "startLine" : 46
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.abc.qwerty.Example.getByIndex(Example.java:7)"
+                "text" : "com.abc.qwerty.Main.myFunction(Main.java:7)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "src/main/java/com/abc/qwerty/Example.java",
+                  "uri" : "src/main/java/com/abc/qwerty/Main.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
@@ -114,16 +414,16 @@
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `getByIndex(null, -255)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `myFunction(null, -255)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/main/java/com/abc/qwerty/Example.java",
+            "uri" : "src/main/java/com/abc/qwerty/Main.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 7
+            "startLine" : 8
           }
         }
       } ],
@@ -131,11 +431,11 @@
         "id" : 1,
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/test/java/com/abc/qwerty/ExampleTest.java",
+            "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 60
+            "startLine" : 57
           }
         }
       } ],
@@ -144,30 +444,30 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "ExampleTest.java:65"
+                "text" : "MainTest.java:60"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "src/test/java/com/abc/qwerty/ExampleTest.java",
+                  "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 65
+                  "startLine" : 60
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.abc.qwerty.Example.getByIndex(Example.java:7)"
+                "text" : "com.abc.qwerty.Main.myFunction(Main.java:8)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "src/main/java/com/abc/qwerty/Example.java",
+                  "uri" : "src/main/java/com/abc/qwerty/Main.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 7
+                  "startLine" : 8
                 }
               }
             }
@@ -175,19 +475,19 @@
         } ]
       } ]
     }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "ruleId" : "utbot.unchecked.ArrayIndexOutOfBoundsException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `getByIndex(null, 0)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArrayIndexOutOfBoundsException: 32.\nTest case: `myFunction([1], 32)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/main/java/com/abc/qwerty/Example.java",
+            "uri" : "src/main/java/com/abc/qwerty/Main.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 6
+            "startLine" : 8
           }
         }
       } ],
@@ -195,11 +495,11 @@
         "id" : 1,
         "physicalLocation" : {
           "artifactLocation" : {
-            "uri" : "src/test/java/com/abc/qwerty/ExampleTest.java",
+            "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 76
+            "startLine" : 71
           }
         }
       } ],
@@ -208,45 +508,30 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "ExampleTest.java:81"
+                "text" : "MainTest.java:77"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "src/test/java/com/abc/qwerty/ExampleTest.java",
+                  "uri" : "build/generated/test/com/abc/qwerty/MainTest.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 81
+                  "startLine" : 77
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.abc.qwerty.Example.getByIndex(Example.java:6)"
+                "text" : "com.abc.qwerty.Main.myFunction(Main.java:8)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
-                  "uri" : "src/main/java/com/abc/qwerty/Example.java",
+                  "uri" : "src/main/java/com/abc/qwerty/Main.java",
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 6
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.abc.qwerty.Example.invert(Example.java:11)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/abc/qwerty/Example.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 11
+                  "startLine" : 8
                 }
               }
             }

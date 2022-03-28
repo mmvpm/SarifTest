@@ -16,6 +16,10 @@ class Node {
     Node next;
     String value;
 
+    int foo(int i) {
+        return 1 / i;
+    }
+
     @Override
     public String toString() {
         return "Node{" +

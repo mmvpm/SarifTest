@@ -3,10 +3,15 @@ name: "Hello world"
 on: [push]
 
 jobs:
-  MyTaskJob:
+  build:
     runs-on: ubuntu-latest
-    name: Run MyTask
     steps:
-      # - uses: actions/checkout@v3
-      - name: Test Github Action
-        uses: Ideaseeker/test-github-action@v3
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Java
+      uses: actions/setup-java@v2
+      with:
+        distribution: adopt
+        java-version: 8
+    - name: My Action
+      uses: Ideaseeker/test-github-action@v4

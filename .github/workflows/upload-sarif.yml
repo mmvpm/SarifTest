@@ -1,7 +1,7 @@
 name: "Upload SARIF"
 
-on:
-  push:
+on: []
+#   push:
 
 jobs:
   build:

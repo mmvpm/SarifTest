@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Test Github Action
-        uses: Ideaseeker/test-github-action@v1
+        uses: Ideaseeker/test-github-action@v2
         with:
           who-to-greet: 'RRRRR'

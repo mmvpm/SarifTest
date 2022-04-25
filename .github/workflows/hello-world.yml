@@ -9,4 +9,4 @@ jobs:
     steps:
       # - uses: actions/checkout@v3
       - name: Test Github Action
-        uses: Ideaseeker/test-github-action@v2
+        uses: Ideaseeker/test-github-action@v3

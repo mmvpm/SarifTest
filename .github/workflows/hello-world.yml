@@ -24,7 +24,8 @@ jobs:
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git commit -m "Add a new file" -a
+        git add .
+        git commit -m "Add a new file"
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:

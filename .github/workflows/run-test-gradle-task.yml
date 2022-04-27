@@ -14,6 +14,6 @@ jobs:
         distribution: adopt
         java-version: 8
     - name: Run testGradleTask
-      run: |
-        chmod +x gradlew
-        ./gradlew testGradleTask
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: testGradleTask

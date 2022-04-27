@@ -1,6 +1,6 @@
 name: "Run testGradleTask"
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build:
@@ -13,3 +13,7 @@ jobs:
       with:
         distribution: adopt
         java-version: 8
+    - name: Run testGradleTask
+      run: |
+        chmod +x gradlew
+        ./gradlew testGradleTask

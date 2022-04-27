@@ -19,5 +19,6 @@ jobs:
       uses: gradle/gradle-build-action@v2
       with:
         arguments: testGradleTask
+      env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}

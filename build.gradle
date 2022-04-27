@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-//        mavenLocal()
         maven {
             url = uri("https://maven.pkg.github.com/IdeaSeeker/TestGradlePlugin")
             credentials {
@@ -10,7 +9,6 @@ buildscript {
         }
     }
     dependencies {
-//        classpath group: 'com.github.ideaseeker', name: 'TestGradlePlugin', version: '1.0-SNAPSHOT'
         classpath group: 'com.github.ideaseeker', name: 'testgradleplugin', version: '1.1'
     }
 }

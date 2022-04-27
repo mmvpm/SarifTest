@@ -1,6 +1,6 @@
 name: "Run testGradleTask"
 
-on: []
+on: [pull_request]
 
 jobs:
   build:

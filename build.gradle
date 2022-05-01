@@ -1,15 +1,11 @@
 buildscript {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/IdeaSeeker/TestGradlePlugin")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
+            url 'https://jitpack.io'
         }
     }
     dependencies {
-        classpath group: 'com.github.ideaseeker', name: 'test-gradle-plugin', version: '0.0.2'
+        classpath group: 'com.github.ideaseeker', name: 'testgradleplugin', version: 'HEAD'
     }
 }
 

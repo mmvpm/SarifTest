@@ -17,3 +17,6 @@ jobs:
 
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
+      with:
+        username: ${{ github.actor }}
+        token: ${{ secrets.GITHUB_TOKEN }}

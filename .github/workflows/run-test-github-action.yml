@@ -19,4 +19,5 @@ jobs:
       uses: Ideaseeker/test-github-action@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        targetClasses: "'Main Example'"
+        testsDirectory: .utbit/test
+        pushTests: false

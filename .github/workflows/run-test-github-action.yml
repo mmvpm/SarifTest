@@ -14,10 +14,6 @@ jobs:
       with:
         distribution: adopt
         java-version: 14
-    
-    - name: Echo FALSE from main
-      if: false
-      run: echo "FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE"
 
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main

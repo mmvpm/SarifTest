@@ -1,6 +1,6 @@
 name: "Run test-github-action"
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build:

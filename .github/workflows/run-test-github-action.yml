@@ -20,4 +20,4 @@ jobs:
       with:
         # token: ${{ secrets.GITHUB_TOKEN }}
         testsDirectory: .utbit/test
-        pushTests: false
+        pushTests: true

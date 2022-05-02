@@ -18,5 +18,6 @@ jobs:
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         testsDirectory: .utbit/test
         pushTests: false

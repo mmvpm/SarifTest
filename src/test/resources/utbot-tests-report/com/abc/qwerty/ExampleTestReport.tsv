@@ -1,2 +1,0 @@
-Executable/Number of test methods	Successful tests	Failing tests (with exceptions)	Failing tests (with timeout)	Errors tests
-com.abc.qwerty.Example.getByIndex(int[], int)	1	3	0	0

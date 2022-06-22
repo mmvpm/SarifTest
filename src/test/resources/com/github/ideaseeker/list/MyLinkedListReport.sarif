@@ -1,0 +1,362 @@
+{
+  "$schema" : "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ {
+          "id" : "utbot.unchecked.NullPointerException",
+          "name" : "NullPointerException",
+          "shortDescription" : {
+            "text" : "Unchecked NullPointerException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception NullPointerException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
+          }
+        } ]
+      }
+    },
+    "results" : [ {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `add(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 18
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 55
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:61"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 61
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.add(MyLinkedList.java:18)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 18
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `toString()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 23
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 104
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:109"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 109
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.toString(MyLinkedList.java:23)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 23
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.asString(MyLinkedList.java:31)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 31
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `toArray()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 47
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 127
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:132"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 132
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.toArray(MyLinkedList.java:47)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 47
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `asString(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 31
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 179
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:189"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 189
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.asString(MyLinkedList.java:31)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 31
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `squareElements()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 59
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 271
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:276"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/test/java/com/github/ideaseeker/list/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 276
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.squareElements(MyLinkedList.java:59)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 59
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

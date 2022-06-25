@@ -1,17 +1,7 @@
-buildscript {
-    repositories {
-        mavenLocal()
-    }
-    dependencies {
-        classpath group: 'org.utbot', name: 'utbot-gradle', version: '1.0-SNAPSHOT'
-    }
-}
-
 plugins {
     id 'java'
+    id "org.utbot.gradle.plugin" version "1.0.0-alpha-6"
 }
-
-apply plugin: 'org.utbot.gradle.plugin'
 
 group 'com.github.ideaseeker'
 version '1.0-SNAPSHOT'
@@ -21,8 +11,8 @@ sarifReport {
         'com.github.ideaseeker.list.MyLinkedList',
         'com.github.ideaseeker.util.Util'
     ]
-    generatedTestsRelativeRoot = 'src/test'
-    sarifReportsRelativeRoot = 'src/test/resources'
+    // generatedTestsRelativeRoot = 'src/test'
+    // sarifReportsRelativeRoot = 'src/test/resources'
 }
 
 repositories {

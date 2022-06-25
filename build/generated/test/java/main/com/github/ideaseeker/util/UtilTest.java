@@ -75,7 +75,7 @@ public class UtilTest {
     @Test
     @DisplayName("bubbleSort: -> return array")
     public void testBubbleSort_ReturnArray() {
-        int[] intArray = {1};
+        int[] intArray = {-255};
         
         int[] actual = Util.bubbleSort(intArray);
         
@@ -85,10 +85,10 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test then does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test later does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): True }
- * Test later returns from: {@code return array; }
+ * Test then returns from: {@code return array; }
  * </pre>
      */
     @Test
@@ -104,16 +104,16 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test afterwards does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test then does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
- * Test then returns from: {@code return array; }
+ * Test later returns from: {@code return array; }
  * </pre>
      */
     @Test
     @DisplayName("bubbleSort: array[i] > array[i + 1] : False -> return array")
     public void testBubbleSort_IOfArrayLessOrEqualI1OfArray() {
-        int[] intArray = {80, 80};
+        int[] intArray = {-255, -255};
         
         int[] actual = Util.bubbleSort(intArray);
         
@@ -140,7 +140,7 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test next does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test then does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): True }Test 
  * throws ArithmeticException in: int temp = 1 / array[0];
@@ -162,7 +162,7 @@ public class UtilTest {
  *     inside this loop, the test iterates the loop {@code for(int j = i + 1; j < bound; ++j) } once,
  *         inside this loop, the test executes conditions:
  *     {@code (array[i] > array[j]): True }
- * Test later iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
+ * Test next iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
  *     {@code (array[i] > array[i + 1]): True }
@@ -192,7 +192,7 @@ public class UtilTest {
  *     inside this loop, the test iterates the loop {@code for(int j = i + 1; j < bound; ++j) } once,
  *         inside this loop, the test executes conditions:
  *     {@code (array[i] > array[j]): False }
- * Test afterwards iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
+ * Test next iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
  *     {@code (array[i] > array[i + 1]): True }

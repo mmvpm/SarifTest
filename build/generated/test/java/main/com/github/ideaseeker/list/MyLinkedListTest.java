@@ -134,8 +134,9 @@ public class MyLinkedListTest {
     @Test
     @DisplayName("asString: ")
     public void testAsString() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
-        Node node = new Node(3);
+        Node node = new Node(Integer.MIN_VALUE);
         Node node1 = new Node(0);
+        node1.value = 1;
         node.next = node1;
         
         Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
@@ -146,7 +147,7 @@ public class MyLinkedListTest {
         asStringMethodArguments[0] = node;
         String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
         
-        String expected = "[3] -> [0] -> ";
+        String expected = "[-2147483648] -> [1] -> ";
         
         assertEquals(expected, actual);
     }

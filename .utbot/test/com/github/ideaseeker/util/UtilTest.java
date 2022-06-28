@@ -64,7 +64,7 @@ public class UtilTest {
     public void testSquare_UtilMultiply_1() {
         /* This test fails because executable under testing com.github.ideaseeker.util.Util.square
         produces Runtime exception java.lang.ArithmeticException: integer overflow */
-        Util.square(49152);
+        Util.square(-1670900435);
     }
     ///endregion
     
@@ -92,10 +92,10 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test afterwards does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test then does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): True }
- * Test afterwards returns from: {@code return array; }
+ * Test further returns from: {@code return array; }
  * </pre>
      */
     @Test
@@ -111,10 +111,10 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test next does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test then does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
- * Test next returns from: {@code return array; }
+ * Test further returns from: {@code return array; }
  * </pre>
      */
     @Test
@@ -147,7 +147,7 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test afterwards does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test later does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): True }Test 
  * throws ArithmeticException in: int temp = 1 / array[0];
@@ -169,7 +169,7 @@ public class UtilTest {
  *     inside this loop, the test iterates the loop {@code for(int j = i + 1; j < bound; ++j) } once,
  *         inside this loop, the test executes conditions:
  *     {@code (array[i] > array[j]): True }
- * Test later iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
+ * Test next iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
  *     {@code (array[i] > array[i + 1]): True }

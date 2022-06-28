@@ -9,54 +9,13 @@ import java.util.concurrent.TimeUnit;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mockStatic;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MyLinkedListTest {
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.f
-    
-    ///region SUCCESSFUL EXECUTIONS for method f(int)
-    
-    /**
-    <pre>
-    Test returns from: {@code return 1 / a; }
- * </pre>
-     */
-    @Test
-    @DisplayName("f: -> return 1 / a")
-    public void testF_Return1DivideA() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        int actual = myLinkedList.f(1);
-        
-        assertEquals(1, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method f(int)
-    
-    /**
-    <pre>
-    Test 
- * throws ArithmeticException in f function body
- * </pre>
-     */
-    @Test
-    @DisplayName("f: public int f(int a) { return 1 / a } -> ThrowArithmeticException")
-    public void testF_ThrowArithmeticException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.f
-        produces Runtime exception java.lang.ArithmeticException: / by zero */
-        myLinkedList.f(0);
-    }
-    ///endregion
-    
-    ///endregion
-    
     ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.squareElements
     
     ///region SUCCESSFUL EXECUTIONS for method squareElements()
@@ -219,47 +178,6 @@ public class MyLinkedListTest {
         } catch (java.lang.reflect.InvocationTargetException invocationTargetException) {
             throw invocationTargetException.getTargetException();
         }
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.g
-    
-    ///region SUCCESSFUL EXECUTIONS for method g(int)
-    
-    /**
-    <pre>
-    Test returns from: {@code return 1 / a; }
- * </pre>
-     */
-    @Test
-    @DisplayName("g: -> return 1 / a")
-    public void testG_Return1DivideA() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        int actual = myLinkedList.g(1);
-        
-        assertEquals(1, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method g(int)
-    
-    /**
-    <pre>
-    Test 
- * throws ArithmeticException in g function body
- * </pre>
-     */
-    @Test
-    @DisplayName("g: public int g(int a) { return 1 / a } -> ThrowArithmeticException")
-    public void testG_ThrowArithmeticException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.g
-        produces Runtime exception java.lang.ArithmeticException: / by zero */
-        myLinkedList.g(0);
     }
     ///endregion
     

@@ -38,7 +38,7 @@
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: integer overflow.\nTest case: `square(49152)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: integer overflow.\nTest case: `square(-1670900435)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -392,18 +392,6 @@
         "organization" : "utbot.org",
         "version" : "1.0",
         "rules" : [ {
-          "id" : "utbot.unchecked.ArithmeticException",
-          "name" : "ArithmeticException",
-          "shortDescription" : {
-            "text" : "Unchecked ArithmeticException detected."
-          },
-          "fullDescription" : {
-            "text" : "Seems like an exception ArithmeticException might be thrown."
-          },
-          "help" : {
-            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
-          }
-        }, {
           "id" : "utbot.unchecked.NullPointerException",
           "name" : "NullPointerException",
           "shortDescription" : {
@@ -419,70 +407,6 @@
       }
     },
     "results" : [ {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `f(0)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 22
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/com/github/ideaseeker/list/MyLinkedListTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 49
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "MyLinkedListTest.java:54"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/com/github/ideaseeker/list/MyLinkedListTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 54
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.f(MyLinkedList.java:22)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 22
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
       "ruleId" : "utbot.unchecked.NullPointerException",
       "level" : "error",
       "message" : {
@@ -495,7 +419,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 63
+            "startLine" : 59
           }
         }
       } ],
@@ -507,7 +431,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 133
+            "startLine" : 92
           }
         }
       } ],
@@ -516,7 +440,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:138"
+                "text" : "MyLinkedListTest.java:97"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -524,14 +448,14 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 138
+                  "startLine" : 97
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.squareElements(MyLinkedList.java:63)"
+                "text" : "com.github.ideaseeker.list.MyLinkedList.squareElements(MyLinkedList.java:59)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -539,7 +463,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 63
+                  "startLine" : 59
                 }
               }
             }
@@ -559,7 +483,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 35
+            "startLine" : 31
           }
         }
       } ],
@@ -571,7 +495,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 208
+            "startLine" : 167
           }
         }
       } ],
@@ -580,7 +504,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:218"
+                "text" : "MyLinkedListTest.java:177"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -588,14 +512,14 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 218
+                  "startLine" : 177
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.asString(MyLinkedList.java:35)"
+                "text" : "com.github.ideaseeker.list.MyLinkedList.asString(MyLinkedList.java:31)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -603,71 +527,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 35
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `g(0)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 24
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/com/github/ideaseeker/list/MyLinkedListTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 257
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "MyLinkedListTest.java:262"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/com/github/ideaseeker/list/MyLinkedListTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 262
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.g(MyLinkedList.java:24)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 24
+                  "startLine" : 31
                 }
               }
             }
@@ -699,7 +559,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 306
+            "startLine" : 224
           }
         }
       } ],
@@ -708,7 +568,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:312"
+                "text" : "MyLinkedListTest.java:230"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -716,7 +576,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 312
+                  "startLine" : 230
                 }
               }
             }
@@ -751,7 +611,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 27
+            "startLine" : 23
           }
         }
       } ],
@@ -763,7 +623,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 355
+            "startLine" : 273
           }
         }
       } ],
@@ -772,7 +632,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:360"
+                "text" : "MyLinkedListTest.java:278"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -780,14 +640,14 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 360
+                  "startLine" : 278
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.toString(MyLinkedList.java:27)"
+                "text" : "com.github.ideaseeker.list.MyLinkedList.toString(MyLinkedList.java:23)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -795,14 +655,14 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 27
+                  "startLine" : 23
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.asString(MyLinkedList.java:35)"
+                "text" : "com.github.ideaseeker.list.MyLinkedList.asString(MyLinkedList.java:31)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -810,7 +670,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 35
+                  "startLine" : 31
                 }
               }
             }
@@ -830,7 +690,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 51
+            "startLine" : 47
           }
         }
       } ],
@@ -842,7 +702,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 378
+            "startLine" : 296
           }
         }
       } ],
@@ -851,7 +711,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:383"
+                "text" : "MyLinkedListTest.java:301"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -859,14 +719,14 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 383
+                  "startLine" : 301
                 }
               }
             }
           }, {
             "location" : {
               "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.toArray(MyLinkedList.java:51)"
+                "text" : "com.github.ideaseeker.list.MyLinkedList.toArray(MyLinkedList.java:47)"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -874,7 +734,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 51
+                  "startLine" : 47
                 }
               }
             }

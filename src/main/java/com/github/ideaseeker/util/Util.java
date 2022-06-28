@@ -6,8 +6,8 @@ public class Util {
         return multiply(a, a);
     }
 
-    public static int multiply(int a, int b) {
-        return Math.multiplyExact(a, b);
+    public static int multiply(int x, int y) {
+        return Math.multiplyExact(x, y);
     }
 
     public static int[] bubbleSort(int[] array) {
@@ -23,10 +23,14 @@ public class Util {
         }
         for (int i = 0; i < bound; ++i) {
             if (array[i] > array[i + 1]) {
-                int temp = 1 / array[0];
+                int temp = 1 / array[1];
             }
         }
         return array;
+    }
+
+    public int f(int a) {
+        return 1 / a;
     }
 }
 

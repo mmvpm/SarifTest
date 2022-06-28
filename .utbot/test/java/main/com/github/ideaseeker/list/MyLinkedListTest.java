@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.mockito.MockedStatic;
 import java.lang.reflect.Method;
 import java.lang.reflect.InvocationTargetException;
+import java.util.concurrent.TimeUnit;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
@@ -169,6 +170,29 @@ public class MyLinkedListTest {
         
         assertEquals(expected, actual);
     }
+    
+    /**
+      */
+    @Test
+    @DisplayName("asString: ")
+    public void testAsString() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
+        Node node = new Node(Integer.MIN_VALUE);
+        Node node1 = new Node(0);
+        node1.value = 1;
+        node.next = node1;
+        
+        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
+        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
+        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
+        asStringMethod.setAccessible(true);
+        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
+        asStringMethodArguments[0] = node;
+        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
+        
+        String expected = "[-2147483648] -> [1] -> ";
+        
+        assertEquals(expected, actual);
+    }
     ///endregion
     
     ///region ERROR SUITE for method asString(com.github.ideaseeker.list.Node)
@@ -314,6 +338,23 @@ public class MyLinkedListTest {
         
         assertEquals(expected, actual);
     }
+    
+    /**
+      */
+    @Test
+    @DisplayName("toString: ")
+    public void testToString() {
+        Node node = new Node(0);
+        Node node1 = new Node(0);
+        node.next = node1;
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        String actual = myLinkedList.toString();
+        
+        String expected = "[0] -> [0] -> ";
+        
+        assertEquals(expected, actual);
+    }
     ///endregion
     
     ///region ERROR SUITE for method toString()
@@ -341,40 +382,7 @@ public class MyLinkedListTest {
     
     ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.toArray
     
-    ///region SUCCESSFUL EXECUTIONS for method toArray()
-    
-    /**
-      */
-    @Test
-    @DisplayName("toArray: ")
-    public void testToArray() {
-        Node node = new Node(0);
-        Node node1 = new Node(0);
-        node.next = node1;
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        int[] actual = myLinkedList.toArray();
-        
-        int[] expected = {0, 0};
-        assertArrayEquals(expected, actual);
-    }
-    
-    /**
-      */
-    @Test
-    @DisplayName("toArray: ")
-    public void testToArray_1() {
-        Node node = new Node(0);
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        int[] actual = myLinkedList.toArray();
-        
-        int[] expected = {0};
-        assertArrayEquals(expected, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method toArray()
+    ///region
     
     /**
     <pre>
@@ -390,6 +398,32 @@ public class MyLinkedListTest {
         /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.toArray
         produces Runtime exception java.lang.NullPointerException */
         myLinkedList.toArray();
+    }
+    
+    @Test
+    @org.junit.jupiter.api.Timeout(value = 1000L, unit = TimeUnit.MILLISECONDS)
+    public void testToArray1() {
+        Node node = new Node(0);
+        node.next = node;
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        /* This execution may take longer than the 1000 ms timeout
+         and therefore fail due to exceeding the timeout. */
+        myLinkedList.toArray();
+    }
+    
+    /**
+      */
+    @Test
+    @DisplayName("toArray: ")
+    public void testToArray() {
+        Node node = new Node(0);
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        int[] actual = myLinkedList.toArray();
+        
+        int[] expected = {0};
+        assertArrayEquals(expected, actual);
     }
     ///endregion
     

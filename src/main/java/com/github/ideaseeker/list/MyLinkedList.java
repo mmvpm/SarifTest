@@ -18,6 +18,8 @@ public class MyLinkedList {
         tail.setNext(node);
         tail = node;
     }
+    
+    public int f(int a) { return 1 / a; }
 
     public String toString() {
         return asString(head);

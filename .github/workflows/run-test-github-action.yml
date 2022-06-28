@@ -24,7 +24,7 @@ jobs:
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
       with:
-        pushTests: 'true'
+        pushTests: 'false'
         targetClasses: '[com.github.ideaseeker.list.MyLinkedList, com.github.ideaseeker.util.Util]'
         generatedTestsRelativeRoot: '.utbit/test'
         testFramework: 'testng'

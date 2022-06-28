@@ -8,13 +8,54 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mockStatic;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MyLinkedListTest {
+    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.f
+    
+    ///region SUCCESSFUL EXECUTIONS for method f(int)
+    
+    /**
+    <pre>
+    Test returns from: {@code return 1 / a; }
+ * </pre>
+     */
+    @Test
+    @DisplayName("f: -> return 1 / a")
+    public void testF_Return1DivideA() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        int actual = myLinkedList.f(1);
+        
+        assertEquals(1, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method f(int)
+    
+    /**
+    <pre>
+    Test 
+ * throws ArithmeticException in f function body
+ * </pre>
+     */
+    @Test
+    @DisplayName("f: public int f(int a) { return 1 / a } -> ThrowArithmeticException")
+    public void testF_ThrowArithmeticException() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.f
+        produces Runtime exception java.lang.ArithmeticException: / by zero */
+        myLinkedList.f(0);
+    }
+    ///endregion
+    
+    ///endregion
+    
     ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.squareElements
     
     ///region SUCCESSFUL EXECUTIONS for method squareElements()
@@ -136,7 +177,7 @@ public class MyLinkedListTest {
     public void testAsString() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
         Node node = new Node(Integer.MIN_VALUE);
         Node node1 = new Node(0);
-        node1.value = Integer.MIN_VALUE;
+        node1.value = 1;
         node.next = node1;
         
         Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
@@ -147,31 +188,7 @@ public class MyLinkedListTest {
         asStringMethodArguments[0] = node;
         String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
         
-        String expected = "[-2147483648] -> [-2147483648] -> ";
-        
-        assertEquals(expected, actual);
-    }
-    
-    /**
-      */
-    @Test
-    @DisplayName("asString: ")
-    public void testAsString_1() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
-        Node node = new Node(Integer.MIN_VALUE);
-        Node node1 = new Node(0);
-        Node node2 = new Node(0);
-        node1.next = node2;
-        node.next = node1;
-        
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
-        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
-        asStringMethod.setAccessible(true);
-        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
-        asStringMethodArguments[0] = node;
-        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
-        
-        String expected = "[-2147483648] -> [0] -> [0] -> ";
+        String expected = "[-2147483648] -> [1] -> ";
         
         assertEquals(expected, actual);
     }
@@ -276,23 +293,6 @@ public class MyLinkedListTest {
         String actual = myLinkedList.toString();
         
         String expected = "[-2147483648] -> ";
-        
-        assertEquals(expected, actual);
-    }
-    
-    /**
-      */
-    @Test
-    @DisplayName("toString: ")
-    public void testToString() {
-        Node node = new Node(1);
-        Node node1 = new Node(0);
-        node.next = node1;
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        String actual = myLinkedList.toString();
-        
-        String expected = "[1] -> [0] -> ";
         
         assertEquals(expected, actual);
     }

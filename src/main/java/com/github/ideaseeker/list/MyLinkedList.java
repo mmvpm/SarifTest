@@ -20,6 +20,8 @@ public class MyLinkedList {
     }
     
     public int f(int a) { return 1 / a; }
+    
+    public int g(int a) { return 1 / a; }
 
     public String toString() {
         return asString(head);

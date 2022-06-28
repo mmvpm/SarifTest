@@ -23,10 +23,15 @@ jobs:
 
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
-#       with:
-#         targetClasses: '[com.github.ideaseeker.list.MyLinkedList]'
-
-#       with:
-#         github_token: ${{ secrets.GITHUB_TOKEN }}
-#         testsDirectory: .utbit/test
-#         pushTests: true
+      with:
+        pushTests: 'true'
+        targetClasses: '[com.github.ideaseeker.list.MyLinkedList, com.github.ideaseeker.util.Util]'
+        generatedTestsRelativeRoot: '.utbit/test'
+        testFramework: 'testng'
+        mockFramework: 'mockito'
+        generationTimeout: 50000
+        codegenLanguage: 'kotlin'
+        mockStrategy: 'all-except-cut'
+        staticsMocking: 'do-not-mock-statics'
+        forceStaticMocking: 'do-not-force'
+        classesToMockAlways: '[a, b,c,  gg]'

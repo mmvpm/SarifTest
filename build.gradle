@@ -9,7 +9,8 @@ version '1.0-SNAPSHOT'
 sarifReport {
     targetClasses = [
         'com.github.ideaseeker.list.MyLinkedList',
-        'com.github.ideaseeker.util.Util'
+        'com.github.ideaseeker.util.Util',
+        'com.github.ideaseeker.Main'
     ]
     // generatedTestsRelativeRoot = 'src/test'
     // sarifReportsRelativeRoot = 'src/test/resources'

@@ -2,19 +2,103 @@ package com.github.ideaseeker.list;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.mockito.MockedStatic;
 import java.lang.reflect.Method;
 import java.lang.reflect.InvocationTargetException;
-import org.mockito.MockedStatic;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.mockStatic;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.Mockito.mockStatic;
 
 public class MyLinkedListTest {
+    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.squareElements
+    
+    ///region SUCCESSFUL EXECUTIONS for method squareElements()
+    
+    /**
+    <pre>
+    Test does not iterate {@code while(current.hasNext()) }, </pre>
+     */
+    @Test
+    @DisplayName("squareElements: ")
+    public void testSquareElements() throws Exception  {
+        MockedStatic mockedStatic = ((MockedStatic) null);
+        try {
+            mockedStatic = mockStatic(com.github.ideaseeker.util.Util.class);
+            mockedStatic.when(() -> com.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0);
+            Node node = new Node(-255);
+            MyLinkedList myLinkedList = new MyLinkedList(node);
+            
+            myLinkedList.squareElements();
+            
+            Object myLinkedListHead = getFieldValue(myLinkedList, "head");
+            Object finalMyLinkedListHeadValue = getFieldValue(myLinkedListHead, "value");
+            
+            assertEquals(0, finalMyLinkedListHeadValue);
+        } finally {
+            mockedStatic.close();
+        }
+    }
+    
+    /**
+    <pre>
+    Test iterates the loop {@code while(current.hasNext()) } once. </pre>
+     */
+    @Test
+    @DisplayName("squareElements: while(current.hasNext()) -> UtilSquare")
+    public void testSquareElements_CurrentHasNext() throws Exception  {
+        MockedStatic mockedStatic = ((MockedStatic) null);
+        try {
+            mockedStatic = mockStatic(com.github.ideaseeker.util.Util.class);
+            mockedStatic.when(() -> com.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0, 0);
+            Node node = new Node(-255);
+            Node node1 = new Node(0);
+            node1.value = -255;
+            node.next = node1;
+            MyLinkedList myLinkedList = new MyLinkedList(node);
+            
+            myLinkedList.squareElements();
+            
+            Object myLinkedListHead = getFieldValue(myLinkedList, "head");
+            Object finalMyLinkedListHeadValue = getFieldValue(myLinkedListHead, "value");
+            Object myLinkedListHead1 = getFieldValue(myLinkedList, "head");
+            Object myLinkedListHead1HeadNext = getFieldValue(myLinkedListHead1, "next");
+            Object finalMyLinkedListHeadNextValue = getFieldValue(myLinkedListHead1HeadNext, "value");
+            
+            assertEquals(0, finalMyLinkedListHeadValue);
+            
+            assertEquals(0, finalMyLinkedListHeadNextValue);
+        } finally {
+            mockedStatic.close();
+        }
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method squareElements()
+    
+    /**
+    <pre>
+    Test 
+ * throws NullPointerException in: head.value = Util.square(head.value);
+ * </pre>
+     */
+    @Test
+    @DisplayName("squareElements: head.value = Util.square(head.value) -> ThrowNullPointerException")
+    public void testSquareElements_ThrowNullPointerException() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.squareElements
+        produces Runtime exception java.lang.NullPointerException */
+        myLinkedList.squareElements();
+    }
+    ///endregion
+    
+    ///endregion
+    
     ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.f
     
     ///region SUCCESSFUL EXECUTIONS for method f(int)
@@ -126,6 +210,23 @@ public class MyLinkedListTest {
         String actual = myLinkedList.toString();
         
         String expected = "[-2147483648] -> ";
+        
+        assertEquals(expected, actual);
+    }
+    
+    /**
+      */
+    @Test
+    @DisplayName("toString: ")
+    public void testToString() {
+        Node node = new Node(1);
+        Node node1 = new Node(0);
+        node.next = node1;
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        String actual = myLinkedList.toString();
+        
+        String expected = "[1] -> [0] -> ";
         
         assertEquals(expected, actual);
     }
@@ -270,90 +371,6 @@ public class MyLinkedListTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.squareElements
-    
-    ///region SUCCESSFUL EXECUTIONS for method squareElements()
-    
-    /**
-    <pre>
-    Test does not iterate {@code while(current.hasNext()) }, </pre>
-     */
-    @Test
-    @DisplayName("squareElements: ")
-    public void testSquareElements() throws Exception  {
-        MockedStatic mockedStatic = ((MockedStatic) null);
-        try {
-            mockedStatic = mockStatic(com.github.ideaseeker.util.Util.class);
-            mockedStatic.when(() -> com.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0);
-            Node node = new Node(-255);
-            MyLinkedList myLinkedList = new MyLinkedList(node);
-            
-            myLinkedList.squareElements();
-            
-            Object myLinkedListHead = getFieldValue(myLinkedList, "head");
-            Object finalMyLinkedListHeadValue = getFieldValue(myLinkedListHead, "value");
-            
-            assertEquals(0, finalMyLinkedListHeadValue);
-        } finally {
-            mockedStatic.close();
-        }
-    }
-    
-    /**
-    <pre>
-    Test iterates the loop {@code while(current.hasNext()) } once. </pre>
-     */
-    @Test
-    @DisplayName("squareElements: while(current.hasNext()) -> UtilSquare")
-    public void testSquareElements_CurrentHasNext() throws Exception  {
-        MockedStatic mockedStatic = ((MockedStatic) null);
-        try {
-            mockedStatic = mockStatic(com.github.ideaseeker.util.Util.class);
-            mockedStatic.when(() -> com.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0, 0);
-            Node node = new Node(-255);
-            Node node1 = new Node(0);
-            node1.value = -255;
-            node.next = node1;
-            MyLinkedList myLinkedList = new MyLinkedList(node);
-            
-            myLinkedList.squareElements();
-            
-            Object myLinkedListHead = getFieldValue(myLinkedList, "head");
-            Object finalMyLinkedListHeadValue = getFieldValue(myLinkedListHead, "value");
-            Object myLinkedListHead1 = getFieldValue(myLinkedList, "head");
-            Object myLinkedListHead1HeadNext = getFieldValue(myLinkedListHead1, "next");
-            Object finalMyLinkedListHeadNextValue = getFieldValue(myLinkedListHead1HeadNext, "value");
-            
-            assertEquals(0, finalMyLinkedListHeadValue);
-            
-            assertEquals(0, finalMyLinkedListHeadNextValue);
-        } finally {
-            mockedStatic.close();
-        }
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method squareElements()
-    
-    /**
-    <pre>
-    Test 
- * throws NullPointerException in: head.value = Util.square(head.value);
- * </pre>
-     */
-    @Test
-    @DisplayName("squareElements: head.value = Util.square(head.value) -> ThrowNullPointerException")
-    public void testSquareElements_ThrowNullPointerException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.squareElements
-        produces Runtime exception java.lang.NullPointerException */
-        myLinkedList.squareElements();
-    }
-    ///endregion
-    
-    ///endregion
-    
     ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.g
     
     ///region SUCCESSFUL EXECUTIONS for method g(int)
@@ -397,6 +414,26 @@ public class MyLinkedListTest {
     
     ///region Data providers and utils methods
     
+    private static Object getFieldValue(Object obj, String fieldName) throws IllegalAccessException, NoSuchFieldException {
+        Class<?> clazz = obj.getClass();
+        java.lang.reflect.Field field;
+        do {
+            try {
+                field = clazz.getDeclaredField(fieldName);
+                field.setAccessible(true);
+                java.lang.reflect.Field modifiersField = java.lang.reflect.Field.class.getDeclaredField("modifiers");
+                modifiersField.setAccessible(true);
+                modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+                
+                return field.get(obj);
+            } catch (NoSuchFieldException e) {
+                clazz = clazz.getSuperclass();
+            }
+        } while (clazz != null);
+    
+        throw new NoSuchFieldException("Field '" + fieldName + "' not found on class " + obj.getClass());
+    }
+    
     private static Object createInstance(String className) 
             throws ClassNotFoundException, NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException {
         Class<?> clazz = Class.forName(className);
@@ -423,26 +460,6 @@ public class MyLinkedListTest {
     
         field.setAccessible(true);
         field.set(object, fieldValue);
-    }
-    
-    private static Object getFieldValue(Object obj, String fieldName) throws IllegalAccessException, NoSuchFieldException {
-        Class<?> clazz = obj.getClass();
-        java.lang.reflect.Field field;
-        do {
-            try {
-                field = clazz.getDeclaredField(fieldName);
-                field.setAccessible(true);
-                java.lang.reflect.Field modifiersField = java.lang.reflect.Field.class.getDeclaredField("modifiers");
-                modifiersField.setAccessible(true);
-                modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
-                
-                return field.get(obj);
-            } catch (NoSuchFieldException e) {
-                clazz = clazz.getSuperclass();
-            }
-        } while (clazz != null);
-    
-        throw new NoSuchFieldException("Field '" + fieldName + "' not found on class " + obj.getClass());
     }
     
     private static Object getUnsafeInstance() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {

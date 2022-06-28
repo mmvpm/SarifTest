@@ -8,18 +8,6 @@
         "organization" : "utbot.org",
         "version" : "1.0",
         "rules" : [ {
-          "id" : "utbot.unchecked.ArithmeticException",
-          "name" : "ArithmeticException",
-          "shortDescription" : {
-            "text" : "Unchecked ArithmeticException detected."
-          },
-          "fullDescription" : {
-            "text" : "Seems like an exception ArithmeticException might be thrown."
-          },
-          "help" : {
-            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
-          }
-        }, {
           "id" : "utbot.unchecked.NullPointerException",
           "name" : "NullPointerException",
           "shortDescription" : {
@@ -31,10 +19,86 @@
           "help" : {
             "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
           }
+        }, {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Unchecked ArithmeticException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
+          }
         } ]
       }
     },
     "results" : [ {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `squareElements()`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 63
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : ".utbot/test/java/main/com/github/ideaseeker/list/MyLinkedListTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 91
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "MyLinkedListTest.java:96"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/list/MyLinkedListTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 96
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.list.MyLinkedList.squareElements(MyLinkedList.java:63)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 63
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
@@ -59,7 +123,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 48
+            "startLine" : 132
           }
         }
       } ],
@@ -68,7 +132,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:53"
+                "text" : "MyLinkedListTest.java:137"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -76,7 +140,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 53
+                  "startLine" : 137
                 }
               }
             }
@@ -123,7 +187,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 97
+            "startLine" : 181
           }
         }
       } ],
@@ -132,7 +196,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:103"
+                "text" : "MyLinkedListTest.java:187"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -140,7 +204,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 103
+                  "startLine" : 187
                 }
               }
             }
@@ -187,7 +251,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 146
+            "startLine" : 247
           }
         }
       } ],
@@ -196,7 +260,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:151"
+                "text" : "MyLinkedListTest.java:252"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -204,7 +268,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 151
+                  "startLine" : 252
                 }
               }
             }
@@ -266,7 +330,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 202
+            "startLine" : 303
           }
         }
       } ],
@@ -275,7 +339,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:207"
+                "text" : "MyLinkedListTest.java:308"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -283,7 +347,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 207
+                  "startLine" : 308
                 }
               }
             }
@@ -330,7 +394,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 254
+            "startLine" : 355
           }
         }
       } ],
@@ -339,7 +403,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:264"
+                "text" : "MyLinkedListTest.java:365"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -347,7 +411,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 264
+                  "startLine" : 365
                 }
               }
             }
@@ -363,70 +427,6 @@
                 },
                 "region" : {
                   "startLine" : 35
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.NullPointerException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `squareElements()`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 63
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/java/main/com/github/ideaseeker/list/MyLinkedListTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 346
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "MyLinkedListTest.java:351"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/list/MyLinkedListTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 351
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.list.MyLinkedList.squareElements(MyLinkedList.java:63)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/list/MyLinkedList.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 63
                 }
               }
             }
@@ -458,7 +458,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 387
+            "startLine" : 404
           }
         }
       } ],
@@ -467,7 +467,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "MyLinkedListTest.java:392"
+                "text" : "MyLinkedListTest.java:409"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -475,7 +475,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 392
+                  "startLine" : 409
                 }
               }
             }
@@ -505,18 +505,6 @@
         "organization" : "utbot.org",
         "version" : "1.0",
         "rules" : [ {
-          "id" : "utbot.unchecked.ArithmeticException",
-          "name" : "ArithmeticException",
-          "shortDescription" : {
-            "text" : "Unchecked ArithmeticException detected."
-          },
-          "fullDescription" : {
-            "text" : "Seems like an exception ArithmeticException might be thrown."
-          },
-          "help" : {
-            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
-          }
-        }, {
           "id" : "utbot.unchecked.NullPointerException",
           "name" : "NullPointerException",
           "shortDescription" : {
@@ -528,14 +516,282 @@
           "help" : {
             "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html"
           }
+        }, {
+          "id" : "utbot.unchecked.ArithmeticException",
+          "name" : "ArithmeticException",
+          "shortDescription" : {
+            "text" : "Unchecked ArithmeticException detected."
+          },
+          "fullDescription" : {
+            "text" : "Seems like an exception ArithmeticException might be thrown."
+          },
+          "help" : {
+            "text" : "https://docs.oracle.com/javase/8/docs/api/java/lang/ArithmeticException.html"
+          }
         } ]
       }
     },
     "results" : [ {
+      "ruleId" : "utbot.unchecked.NullPointerException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `bubbleSort(null)`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 14
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 78
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "UtilTest.java:81"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 81
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:14)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 14
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
       "ruleId" : "utbot.unchecked.ArithmeticException",
       "level" : "error",
       "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: integer overflow.\nTest case: `square(268435688)`\n[Generated test for this case](1)"
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `bubbleSort([0, -1])`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 26
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 95
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "UtilTest.java:100"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 100
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:26)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 26
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `bubbleSort([1, 0, 0])`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 26
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 118
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "UtilTest.java:123"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 123
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:26)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 26
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `bubbleSort([0, 0, -1])`\n[Generated test for this case](1)"
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 26
+          }
+        }
+      } ],
+      "relatedLocations" : [ {
+        "id" : 1,
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 148
+          }
+        }
+      } ],
+      "codeFlows" : [ {
+        "threadFlows" : [ {
+          "locations" : [ {
+            "location" : {
+              "message" : {
+                "text" : "UtilTest.java:153"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 153
+                }
+              }
+            }
+          }, {
+            "location" : {
+              "message" : {
+                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:26)"
+              },
+              "physicalLocation" : {
+                "artifactLocation" : {
+                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
+                  "uriBaseId" : "%SRCROOT%"
+                },
+                "region" : {
+                  "startLine" : 26
+                }
+              }
+            }
+          } ]
+        } ]
+      } ]
+    }, {
+      "ruleId" : "utbot.unchecked.ArithmeticException",
+      "level" : "error",
+      "message" : {
+        "text" : "Unchecked exception: java.lang.ArithmeticException: integer overflow.\nTest case: `square(524352)`\n[Generated test for this case](1)"
       },
       "locations" : [ {
         "physicalLocation" : {
@@ -556,7 +812,7 @@
             "uriBaseId" : "%SRCROOT%"
           },
           "region" : {
-            "startLine" : 42
+            "startLine" : 191
           }
         }
       } ],
@@ -565,7 +821,7 @@
           "locations" : [ {
             "location" : {
               "message" : {
-                "text" : "UtilTest.java:45"
+                "text" : "UtilTest.java:194"
               },
               "physicalLocation" : {
                 "artifactLocation" : {
@@ -573,7 +829,7 @@
                   "uriBaseId" : "%SRCROOT%"
                 },
                 "region" : {
-                  "startLine" : 45
+                  "startLine" : 194
                 }
               }
             }
@@ -625,262 +881,16 @@
           } ]
         } ]
       } ]
-    }, {
-      "ruleId" : "utbot.unchecked.NullPointerException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.NullPointerException.\nTest case: `bubbleSort(null)`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 14
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 141
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "UtilTest.java:144"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 144
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:14)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 14
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `bubbleSort([0, -1])`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 26
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 158
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "UtilTest.java:163"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 163
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:26)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 26
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `bubbleSort([1, 0, 0])`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 26
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 181
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "UtilTest.java:186"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 186
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:26)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 26
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
-    }, {
-      "ruleId" : "utbot.unchecked.ArithmeticException",
-      "level" : "error",
-      "message" : {
-        "text" : "Unchecked exception: java.lang.ArithmeticException: / by zero.\nTest case: `bubbleSort([0, 0, -1])`\n[Generated test for this case](1)"
-      },
-      "locations" : [ {
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 26
-          }
-        }
-      } ],
-      "relatedLocations" : [ {
-        "id" : 1,
-        "physicalLocation" : {
-          "artifactLocation" : {
-            "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-            "uriBaseId" : "%SRCROOT%"
-          },
-          "region" : {
-            "startLine" : 211
-          }
-        }
-      } ],
-      "codeFlows" : [ {
-        "threadFlows" : [ {
-          "locations" : [ {
-            "location" : {
-              "message" : {
-                "text" : "UtilTest.java:216"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : ".utbot/test/java/main/com/github/ideaseeker/util/UtilTest.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 216
-                }
-              }
-            }
-          }, {
-            "location" : {
-              "message" : {
-                "text" : "com.github.ideaseeker.util.Util.bubbleSort(Util.java:26)"
-              },
-              "physicalLocation" : {
-                "artifactLocation" : {
-                  "uri" : "src/main/java/com/github/ideaseeker/util/Util.java",
-                  "uriBaseId" : "%SRCROOT%"
-                },
-                "region" : {
-                  "startLine" : 26
-                }
-              }
-            }
-          } ]
-        } ]
-      } ]
     } ]
+  }, {
+    "tool" : {
+      "driver" : {
+        "name" : "UnitTestBot",
+        "organization" : "utbot.org",
+        "version" : "1.0",
+        "rules" : [ ]
+      }
+    },
+    "results" : [ ]
   } ]
 }

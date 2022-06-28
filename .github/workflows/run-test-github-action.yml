@@ -23,6 +23,8 @@ jobs:
 
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
+      with:
+        targetClasses: '[com.github.ideaseeker.list.MyLinkedList]'
 
 #       with:
 #         github_token: ${{ secrets.GITHUB_TOKEN }}

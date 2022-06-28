@@ -6,7 +6,7 @@ plugins {
 group 'com.github.ideaseeker'
 version '1.0-SNAPSHOT'
 
-sarifReport {
+/*sarifReport {
     targetClasses = [
         'com.github.ideaseeker.list.MyLinkedList',
         'com.github.ideaseeker.util.Util',
@@ -14,7 +14,7 @@ sarifReport {
     ]
     // generatedTestsRelativeRoot = 'src/test'
     // sarifReportsRelativeRoot = 'src/test/resources'
-}
+}*/
 
 repositories {
     mavenCentral()

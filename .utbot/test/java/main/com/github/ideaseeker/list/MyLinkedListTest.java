@@ -8,13 +8,54 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mockStatic;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MyLinkedListTest {
+    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.f
+    
+    ///region SUCCESSFUL EXECUTIONS for method f(int)
+    
+    /**
+    <pre>
+    Test returns from: {@code return 1 / a; }
+ * </pre>
+     */
+    @Test
+    @DisplayName("f: -> return 1 / a")
+    public void testF_Return1DivideA() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        int actual = myLinkedList.f(1);
+        
+        assertEquals(1, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method f(int)
+    
+    /**
+    <pre>
+    Test 
+ * throws ArithmeticException in f function body
+ * </pre>
+     */
+    @Test
+    @DisplayName("f: public int f(int a) { return 1 / a } -> ThrowArithmeticException")
+    public void testF_ThrowArithmeticException() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.f
+        produces Runtime exception java.lang.ArithmeticException: / by zero */
+        myLinkedList.f(0);
+    }
+    ///endregion
+    
+    ///endregion
+    
     ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.squareElements
     
     ///region SUCCESSFUL EXECUTIONS for method squareElements()
@@ -99,9 +140,92 @@ public class MyLinkedListTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.f
+    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.asString
     
-    ///region SUCCESSFUL EXECUTIONS for method f(int)
+    ///region SUCCESSFUL EXECUTIONS for method asString(com.github.ideaseeker.list.Node)
+    
+    /**
+    <pre>
+    Test does not iterate {@code while(current.hasNext()) }, invokes:
+ *     StringBuilder::append 3 times,
+ *     StringBuilder::toString once
+ * returns from: {@code return stringBuilder.toString(); }
+ * </pre>
+     */
+    @Test
+    @DisplayName("asString: while(current.hasNext()) -> return stringBuilder.toString()")
+    public void testAsString_CurrentHasNext() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
+        Node node = new Node(Integer.MIN_VALUE);
+        
+        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
+        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
+        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
+        asStringMethod.setAccessible(true);
+        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
+        asStringMethodArguments[0] = node;
+        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
+        
+        String expected = "[-2147483648] -> ";
+        
+        assertEquals(expected, actual);
+    }
+    
+    /**
+      */
+    @Test
+    @DisplayName("asString: ")
+    public void testAsString() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
+        Node node = new Node(Integer.MIN_VALUE);
+        Node node1 = new Node(0);
+        node1.value = Integer.MIN_VALUE;
+        node.next = node1;
+        
+        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
+        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
+        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
+        asStringMethod.setAccessible(true);
+        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
+        asStringMethodArguments[0] = node;
+        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
+        
+        String expected = "[-2147483648] -> [-2147483648] -> ";
+        
+        assertEquals(expected, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method asString(com.github.ideaseeker.list.Node)
+    
+    /**
+    <pre>
+    Test 
+ * throws NullPointerException in: while(current.hasNext())
+ * </pre>
+     */
+    @Test
+    @DisplayName("asString: while(current.hasNext()) -> ThrowNullPointerException")
+    public void testAsString_ThrowNullPointerException() throws Throwable  {
+        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.asString
+        produces Runtime exception java.lang.NullPointerException */
+        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
+        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
+        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
+        asStringMethod.setAccessible(true);
+        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
+        asStringMethodArguments[0] = ((Object) null);
+        try {
+            asStringMethod.invoke(null, asStringMethodArguments);
+        } catch (java.lang.reflect.InvocationTargetException invocationTargetException) {
+            throw invocationTargetException.getTargetException();
+        }
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.g
+    
+    ///region SUCCESSFUL EXECUTIONS for method g(int)
     
     /**
     <pre>
@@ -109,32 +233,32 @@ public class MyLinkedListTest {
  * </pre>
      */
     @Test
-    @DisplayName("f: -> return 1 / a")
-    public void testF_Return1DivideA() {
+    @DisplayName("g: -> return 1 / a")
+    public void testG_Return1DivideA() {
         MyLinkedList myLinkedList = new MyLinkedList(null);
         
-        int actual = myLinkedList.f(1);
+        int actual = myLinkedList.g(1);
         
         assertEquals(1, actual);
     }
     ///endregion
     
-    ///region ERROR SUITE for method f(int)
+    ///region ERROR SUITE for method g(int)
     
     /**
     <pre>
     Test 
- * throws ArithmeticException in f function body
+ * throws ArithmeticException in g function body
  * </pre>
      */
     @Test
-    @DisplayName("f: public int f(int a) { return 1 / a } -> ThrowArithmeticException")
-    public void testF_ThrowArithmeticException() {
+    @DisplayName("g: public int g(int a) { return 1 / a } -> ThrowArithmeticException")
+    public void testG_ThrowArithmeticException() {
         MyLinkedList myLinkedList = new MyLinkedList(null);
         
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.f
+        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.g
         produces Runtime exception java.lang.ArithmeticException: / by zero */
-        myLinkedList.f(0);
+        myLinkedList.g(0);
     }
     ///endregion
     
@@ -210,23 +334,6 @@ public class MyLinkedListTest {
         String actual = myLinkedList.toString();
         
         String expected = "[-2147483648] -> ";
-        
-        assertEquals(expected, actual);
-    }
-    
-    /**
-      */
-    @Test
-    @DisplayName("toString: ")
-    public void testToString() {
-        Node node = new Node(1);
-        Node node1 = new Node(0);
-        node.next = node1;
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        String actual = myLinkedList.toString();
-        
-        String expected = "[1] -> [0] -> ";
         
         assertEquals(expected, actual);
     }
@@ -306,107 +413,6 @@ public class MyLinkedListTest {
         /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.toArray
         produces Runtime exception java.lang.NullPointerException */
         myLinkedList.toArray();
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.asString
-    
-    ///region SUCCESSFUL EXECUTIONS for method asString(com.github.ideaseeker.list.Node)
-    
-    /**
-    <pre>
-    Test does not iterate {@code while(current.hasNext()) }, invokes:
- *     StringBuilder::append 3 times,
- *     StringBuilder::toString once
- * returns from: {@code return stringBuilder.toString(); }
- * </pre>
-     */
-    @Test
-    @DisplayName("asString: while(current.hasNext()) -> return stringBuilder.toString()")
-    public void testAsString_CurrentHasNext() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
-        Node node = new Node(Integer.MIN_VALUE);
-        
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
-        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
-        asStringMethod.setAccessible(true);
-        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
-        asStringMethodArguments[0] = node;
-        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
-        
-        String expected = "[-2147483648] -> ";
-        
-        assertEquals(expected, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method asString(com.github.ideaseeker.list.Node)
-    
-    /**
-    <pre>
-    Test 
- * throws NullPointerException in: while(current.hasNext())
- * </pre>
-     */
-    @Test
-    @DisplayName("asString: while(current.hasNext()) -> ThrowNullPointerException")
-    public void testAsString_ThrowNullPointerException() throws Throwable  {
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.asString
-        produces Runtime exception java.lang.NullPointerException */
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
-        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
-        asStringMethod.setAccessible(true);
-        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
-        asStringMethodArguments[0] = ((Object) null);
-        try {
-            asStringMethod.invoke(null, asStringMethodArguments);
-        } catch (java.lang.reflect.InvocationTargetException invocationTargetException) {
-            throw invocationTargetException.getTargetException();
-        }
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.g
-    
-    ///region SUCCESSFUL EXECUTIONS for method g(int)
-    
-    /**
-    <pre>
-    Test returns from: {@code return 1 / a; }
- * </pre>
-     */
-    @Test
-    @DisplayName("g: -> return 1 / a")
-    public void testG_Return1DivideA() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        int actual = myLinkedList.g(1);
-        
-        assertEquals(1, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method g(int)
-    
-    /**
-    <pre>
-    Test 
- * throws ArithmeticException in g function body
- * </pre>
-     */
-    @Test
-    @DisplayName("g: public int g(int a) { return 1 / a } -> ThrowArithmeticException")
-    public void testG_ThrowArithmeticException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.g
-        produces Runtime exception java.lang.ArithmeticException: / by zero */
-        myLinkedList.g(0);
     }
     ///endregion
     

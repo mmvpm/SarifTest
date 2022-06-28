@@ -169,29 +169,6 @@ public class MyLinkedListTest {
         
         assertEquals(expected, actual);
     }
-    
-    /**
-      */
-    @Test
-    @DisplayName("asString: ")
-    public void testAsString() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
-        Node node = new Node(Integer.MIN_VALUE);
-        Node node1 = new Node(0);
-        node1.value = Integer.MIN_VALUE;
-        node.next = node1;
-        
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
-        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
-        asStringMethod.setAccessible(true);
-        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
-        asStringMethodArguments[0] = node;
-        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
-        
-        String expected = "[-2147483648] -> [-2147483648] -> ";
-        
-        assertEquals(expected, actual);
-    }
     ///endregion
     
     ///region ERROR SUITE for method asString(com.github.ideaseeker.list.Node)

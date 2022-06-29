@@ -1,4 +1,4 @@
-package com.github.ideaseeker.util;
+package io.github.ideaseeker.util;
 
 public class Util {
 

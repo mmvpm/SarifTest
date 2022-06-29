@@ -1,6 +1,6 @@
-package com.github.ideaseeker.list;
+package io.github.ideaseeker.list;
 
-import com.github.ideaseeker.util.Util;
+import io.github.ideaseeker.util.Util;
 
 import java.util.ArrayList;
 

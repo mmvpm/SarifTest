@@ -3,114 +3,10 @@ package io.github.ideaseeker.util;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UtilTest {
-    ///region Test suites for executable io.github.ideaseeker.util.Util.square
-    
-    ///region SUCCESSFUL EXECUTIONS for method square(int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Util::multiply once
- * returns from: {@code return multiply(a, a); }
- * </pre>
-     */
-    @Test
-    @DisplayName("square: UtilMultiply -> return multiply(a, a)")
-    public void testSquare_UtilMultiply() {
-        int actual = Util.square(26);
-        
-        assertEquals(676, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method square(int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Util::multiply once
- * 
- * throws ArithmeticException in: return multiply(a, a);
- * </pre>
-     */
-    @Test
-    @DisplayName("square: return multiply(a, a) : True -> ThrowArithmeticException")
-    public void testSquare_UtilMultiply_1() {
-        /* This test fails because executable under testing io.github.ideaseeker.util.Util.square
-        produces Runtime exception java.lang.ArithmeticException: integer overflow */
-        Util.square(2034532190);
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable io.github.ideaseeker.util.Util.multiply
-    
-    ///region SUCCESSFUL EXECUTIONS for method multiply(int, int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Math::multiplyExact once
- * returns from: {@code return Math.multiplyExact(x, y); }
- * </pre>
-     */
-    @Test
-    @DisplayName("multiply: MathMultiplyExact -> return Math.multiplyExact(x, y)")
-    public void testMultiply_MathMultiplyExact() {
-        int actual = Util.multiply(-4, 0);
-        
-        assertEquals(0, actual);
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable io.github.ideaseeker.util.Util.f
-    
-    ///region SUCCESSFUL EXECUTIONS for method f(int)
-    
-    /**
-    <pre>
-    Test returns from: {@code return 1 / a; }
- * </pre>
-     */
-    @Test
-    @DisplayName("f: -> return 1 / a")
-    public void testF_Return1DivideA() {
-        Util util = new Util();
-        
-        int actual = util.f(1);
-        
-        assertEquals(1, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method f(int)
-    
-    /**
-    <pre>
-    Test 
- * throws ArithmeticException in: return 1 / a;
- * </pre>
-     */
-    @Test
-    @DisplayName("f: return 1 / a : True -> ThrowArithmeticException")
-    public void testF_ThrowArithmeticException() {
-        Util util = new Util();
-        
-        /* This test fails because executable under testing io.github.ideaseeker.util.Util.f
-        produces Runtime exception java.lang.ArithmeticException: / by zero */
-        util.f(0);
-    }
-    ///endregion
-    
-    ///endregion
-    
     ///region Test suites for executable io.github.ideaseeker.util.Util.bubbleSort
     
     ///region SUCCESSFUL EXECUTIONS for method bubbleSort(int[])
@@ -133,10 +29,10 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test later does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test further does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): True }
- * Test next returns from: {@code return array; }
+ * Test later returns from: {@code return array; }
  * </pre>
      */
     @Test
@@ -152,16 +48,16 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test next does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test further does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
- * Test further returns from: {@code return array; }
+ * Test later returns from: {@code return array; }
  * </pre>
      */
     @Test
     @DisplayName("bubbleSort: array[i] > array[i + 1] : False -> return array")
     public void testBubbleSort_IOfArrayLessOrEqualI1OfArray() {
-        int[] intArray = {244, 244};
+        int[] intArray = {250, 250};
         
         int[] actual = Util.bubbleSort(intArray);
         
@@ -210,7 +106,7 @@ public class UtilTest {
  *     inside this loop, the test iterates the loop {@code for(int j = i + 1; j < bound; ++j) } once,
  *         inside this loop, the test executes conditions:
  *     {@code (array[i] > array[j]): True }
- * Test next iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
+ * Test then iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
  *     {@code (array[i] > array[i + 1]): True }
@@ -240,7 +136,7 @@ public class UtilTest {
  *     inside this loop, the test iterates the loop {@code for(int j = i + 1; j < bound; ++j) } once,
  *         inside this loop, the test executes conditions:
  *     {@code (array[i] > array[j]): False }
- * Test further iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
+ * Test then iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
  *     {@code (array[i] > array[i + 1]): True }
@@ -255,6 +151,110 @@ public class UtilTest {
         /* This test fails because executable under testing io.github.ideaseeker.util.Util.bubbleSort
         produces Runtime exception java.lang.ArithmeticException: / by zero */
         Util.bubbleSort(intArray);
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable io.github.ideaseeker.util.Util.f
+    
+    ///region SUCCESSFUL EXECUTIONS for method f(int)
+    
+    /**
+    <pre>
+    Test returns from: {@code return 1 / a; }
+ * </pre>
+     */
+    @Test
+    @DisplayName("f: -> return 1 / a")
+    public void testF_Return1DivideA() {
+        Util util = new Util();
+        
+        int actual = util.f(1);
+        
+        assertEquals(1, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method f(int)
+    
+    /**
+    <pre>
+    Test 
+ * throws ArithmeticException in: return 1 / a;
+ * </pre>
+     */
+    @Test
+    @DisplayName("f: return 1 / a : True -> ThrowArithmeticException")
+    public void testF_ThrowArithmeticException() {
+        Util util = new Util();
+        
+        /* This test fails because executable under testing io.github.ideaseeker.util.Util.f
+        produces Runtime exception java.lang.ArithmeticException: / by zero */
+        util.f(0);
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable io.github.ideaseeker.util.Util.square
+    
+    ///region SUCCESSFUL EXECUTIONS for method square(int)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Util::multiply once
+ * returns from: {@code return multiply(a, a); }
+ * </pre>
+     */
+    @Test
+    @DisplayName("square: UtilMultiply -> return multiply(a, a)")
+    public void testSquare_UtilMultiply() {
+        int actual = Util.square(-256);
+        
+        assertEquals(65536, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method square(int)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Util::multiply once
+ * 
+ * throws ArithmeticException in: return multiply(a, a);
+ * </pre>
+     */
+    @Test
+    @DisplayName("square: return multiply(a, a) : True -> ThrowArithmeticException")
+    public void testSquare_UtilMultiply_1() {
+        /* This test fails because executable under testing io.github.ideaseeker.util.Util.square
+        produces Runtime exception java.lang.ArithmeticException: integer overflow */
+        Util.square(128223424);
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable io.github.ideaseeker.util.Util.multiply
+    
+    ///region SUCCESSFUL EXECUTIONS for method multiply(int, int)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Math::multiplyExact once
+ * returns from: {@code return Math.multiplyExact(x, y); }
+ * </pre>
+     */
+    @Test
+    @DisplayName("multiply: MathMultiplyExact -> return Math.multiplyExact(x, y)")
+    public void testMultiply_MathMultiplyExact() {
+        int actual = Util.multiply(0, 0);
+        
+        assertEquals(0, actual);
     }
     ///endregion
     

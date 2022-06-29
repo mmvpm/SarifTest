@@ -4,13 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       pushTests:
-        description: 'Push generated tests to the repository or not.'
+        description: "Push generated tests to the repository"
         type: boolean
         default: true
-      targetClasses:
+      targetClasses: # remove ?
+        description: "Classes for test generation ('[]' = all)"
         type: string
         default: '[]'
-      generatedTestsRelativeRoot:
+      generatedTestsRelativeRoot: # remove ?
+        description: "Relative path to the root of the tests"
         type: string
         default: '.utbot/test'
       testFramework:
@@ -21,6 +23,7 @@ on:
           - testng
         default: 'junit5'
       generationTimeout:
+        description: "Time budget for one class (ms)"
         type: string
         default: '60000'
       codegenLanguage:
@@ -48,7 +51,7 @@ on:
           - 'force'
           - 'do-not-force'
         default: 'force'
-      classesToMockAlways:
+      classesToMockAlways: # remove ?
         type: string
         default: '[]'
 

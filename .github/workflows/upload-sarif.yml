@@ -1,7 +1,6 @@
 name: "Upload SARIF"
 
-# on: [push]
-on: [pull_request]
+on: [workflow_dispatch]
 
 jobs:
   build:

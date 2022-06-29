@@ -24,13 +24,13 @@ jobs:
 
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
-#       with:
+      with:
 #         pushTests: 'false'
-#         targetClasses: '[com.github.ideaseeker.list.MyLinkedList, com.github.ideaseeker.util.Util]'
+#         targetClasses: '[com.github.ideaseeker.list.Node]'
 #         generatedTestsRelativeRoot: '.utbit/test'
 #         testFramework: 'testng'
 #         mockFramework: 'mockito'
-#         generationTimeout: 50000
+        generationTimeout: 1000
 #         codegenLanguage: 'kotlin'
 #         mockStrategy: 'all-except-cut'
 #         staticsMocking: 'do-not-mock-statics'

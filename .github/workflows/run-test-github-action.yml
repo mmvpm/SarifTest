@@ -2,7 +2,24 @@ name: "Run test-github-action"
 
 # on: [push]
 # on: pull_request
-on: workflow_dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      codegenLanguage:
+        description: 'codegen language'
+        required: true
+        default: 'java' 
+        type: choice
+        options:
+        - java
+        - kotlin
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      generationTimeout:
+        default: '64000'
 
 jobs:
   build:
@@ -33,7 +50,7 @@ jobs:
 #         testFramework: 'testng'
 #         mockFramework: 'mockito'
         generationTimeout: 1000
-#         codegenLanguage: 'kotlin'
+        codegenLanguage: ${{ inputs.codegenLanguage }}
 #         mockStrategy: 'all-except-cut'
 #         staticsMocking: 'do-not-mock-statics'
 #         forceStaticMocking: 'do-not-force'

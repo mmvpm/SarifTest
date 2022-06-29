@@ -28,9 +28,5 @@ public class Util {
         }
         return array;
     }
-
-    public int f(int a) {
-        return 1 / a;
-    }
 }
 

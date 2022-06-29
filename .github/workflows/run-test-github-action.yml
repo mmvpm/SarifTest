@@ -7,14 +7,14 @@ on:
         description: "Push generated tests to the repository"
         type: boolean
         default: true
-      targetClasses: # remove ?
-        description: "Classes for test generation ('[]' = all)"
-        type: string
-        default: '[]'
-      generatedTestsRelativeRoot: # remove ?
-        description: "Relative path to the root of the tests"
-        type: string
-        default: '.utbot/test'
+#       targetClasses:
+#         description: "Classes for test generation ('[]' = all)"
+#         type: string
+#         default: '[]'
+#       generatedTestsRelativeRoot:
+#         description: "Relative path to the root of the tests"
+#         type: string
+#         default: '.utbot/test'
       testFramework:
         type: choice
         options:
@@ -51,9 +51,9 @@ on:
           - 'force'
           - 'do-not-force'
         default: 'force'
-      classesToMockAlways: # remove ?
-        type: string
-        default: '[]'
+#       classesToMockAlways:
+#         type: string
+#         default: '[]'
 
 jobs:
   build:

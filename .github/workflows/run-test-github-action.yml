@@ -1,25 +1,56 @@
 name: "Run test-github-action"
 
-# on: [push]
-# on: pull_request
-
 on:
   workflow_dispatch:
     inputs:
-      codegenLanguage:
-        description: 'codegen language'
-        required: true
-        default: 'java' 
+      pushTests:
+        description: 'Push generated tests to the repository or not.'
+        type: boolean
+        default: true
+      targetClasses:
+        type: string
+        default: '[]'
+      generatedTestsRelativeRoot:
+        type: string
+        default: '.utbot/test'
+      testFramework:
         type: choice
         options:
-        - java
-        - kotlin
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
+          - junit4
+          - junit5
+          - testng
+        default: 'junit5'
       generationTimeout:
-        default: '64000'
+        type: string
+        default: '60000'
+      codegenLanguage:
+        type: choice
+        options:
+          - java
+          - kotlin
+        default: java
+      mockStrategy:
+        type: choice
+        options:
+          - 'do-not-mock'
+          - 'package-based'
+          - 'all-except-cut'
+        default: 'package-based'
+      staticsMocking:
+        type: choice
+        options: 
+          - 'do-not-mock-statics'
+          - 'mock-statics'
+        default: 'mock-statics'
+      forceStaticMocking:
+        type: choice
+        options:
+          - 'force'
+          - 'do-not-force'
+        default: 'force'
+      classesToMockAlways:
+        type: string
+        default: '[]'
 
 jobs:
   build:
@@ -27,8 +58,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        ref: ${{ github.head_ref }}
 
     - name: Setup Java
       uses: actions/setup-java@v2
@@ -44,14 +73,13 @@ jobs:
     - name: Run test-github-action
       uses: Ideaseeker/test-github-action@main
       with:
-#         pushTests: 'false'
-#         targetClasses: '[com.github.ideaseeker.list.Node]'
-#         generatedTestsRelativeRoot: '.utbit/test'
-#         testFramework: 'testng'
-#         mockFramework: 'mockito'
-        generationTimeout: 1000
+        pushTests: ${{ inputs.pushTests }}
+        targetClasses: ${{ inputs.targetClasses }}
+        generatedTestsRelativeRoot: ${{ inputs.generatedTestsRelativeRoot }}
+        testFramework: ${{ inputs.testFramework }}
+        generationTimeout: ${{ inputs.generationTimeout }}
         codegenLanguage: ${{ inputs.codegenLanguage }}
-#         mockStrategy: 'all-except-cut'
-#         staticsMocking: 'do-not-mock-statics'
-#         forceStaticMocking: 'do-not-force'
-#         classesToMockAlways: '[a, b,c,  gg]'
+        mockStrategy: ${{ inputs.mockStrategy }}
+        staticsMocking: ${{ inputs.staticsMocking }}
+        forceStaticMocking: ${{ inputs.forceStaticMocking }}
+        classesToMockAlways: ${{ inputs.classesToMockAlways }}

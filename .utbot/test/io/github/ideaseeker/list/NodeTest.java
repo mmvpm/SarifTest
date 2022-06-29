@@ -1,4 +1,4 @@
-package com.github.ideaseeker.list;
+package io.github.ideaseeker.list;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -8,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NodeTest {
-    ///region Test suites for executable com.github.ideaseeker.list.Node.setNext
+    ///region Test suites for executable io.github.ideaseeker.list.Node.setNext
     
-    ///region SUCCESSFUL EXECUTIONS for method setNext(com.github.ideaseeker.list.Node)
+    ///region SUCCESSFUL EXECUTIONS for method setNext(io.github.ideaseeker.list.Node)
     
     /**
       */
@@ -25,7 +25,7 @@ public class NodeTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.Node.toString
+    ///region Test suites for executable io.github.ideaseeker.list.Node.toString
     
     ///region SUCCESSFUL EXECUTIONS for method toString()
     
@@ -52,7 +52,7 @@ public class NodeTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.Node.hasNext
+    ///region Test suites for executable io.github.ideaseeker.list.Node.hasNext
     
     ///region SUCCESSFUL EXECUTIONS for method hasNext()
     

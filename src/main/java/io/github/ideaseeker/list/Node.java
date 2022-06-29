@@ -1,4 +1,4 @@
-package com.github.ideaseeker.list;
+package io.github.ideaseeker.list;
 
 public class Node {
 

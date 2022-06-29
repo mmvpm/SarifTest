@@ -1,4 +1,4 @@
-package com.github.ideaseeker.list;
+package io.github.ideaseeker.list;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -9,55 +9,14 @@ import java.util.concurrent.TimeUnit;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mockStatic;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MyLinkedListTest {
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.f
-    
-    ///region SUCCESSFUL EXECUTIONS for method f(int)
-    
-    /**
-    <pre>
-    Test returns from: {@code return 1 / a; }
- * </pre>
-     */
-    @Test
-    @DisplayName("f: -> return 1 / a")
-    public void testF_Return1DivideA() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        int actual = myLinkedList.f(1);
-        
-        assertEquals(1, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method f(int)
-    
-    /**
-    <pre>
-    Test 
- * throws ArithmeticException in f function body
- * </pre>
-     */
-    @Test
-    @DisplayName("f: public int f(int a) { return 1 / a } -> ThrowArithmeticException")
-    public void testF_ThrowArithmeticException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.f
-        produces Runtime exception java.lang.ArithmeticException: / by zero */
-        myLinkedList.f(0);
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.squareElements
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.squareElements
     
     ///region SUCCESSFUL EXECUTIONS for method squareElements()
     
@@ -70,8 +29,8 @@ public class MyLinkedListTest {
     public void testSquareElements() throws Exception  {
         MockedStatic mockedStatic = ((MockedStatic) null);
         try {
-            mockedStatic = mockStatic(com.github.ideaseeker.util.Util.class);
-            mockedStatic.when(() -> com.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0);
+            mockedStatic = mockStatic(io.github.ideaseeker.util.Util.class);
+            mockedStatic.when(() -> io.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0);
             Node node = new Node(-255);
             MyLinkedList myLinkedList = new MyLinkedList(node);
             
@@ -95,8 +54,8 @@ public class MyLinkedListTest {
     public void testSquareElements_CurrentHasNext() throws Exception  {
         MockedStatic mockedStatic = ((MockedStatic) null);
         try {
-            mockedStatic = mockStatic(com.github.ideaseeker.util.Util.class);
-            mockedStatic.when(() -> com.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0, 0);
+            mockedStatic = mockStatic(io.github.ideaseeker.util.Util.class);
+            mockedStatic.when(() -> io.github.ideaseeker.util.Util.square(anyInt())).thenReturn(0, 0);
             Node node = new Node(-255);
             Node node1 = new Node(0);
             node1.value = -255;
@@ -133,7 +92,7 @@ public class MyLinkedListTest {
     public void testSquareElements_ThrowNullPointerException() {
         MyLinkedList myLinkedList = new MyLinkedList(null);
         
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.squareElements
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.squareElements
         produces Runtime exception java.lang.NullPointerException */
         myLinkedList.squareElements();
     }
@@ -141,9 +100,9 @@ public class MyLinkedListTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.asString
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.asString
     
-    ///region SUCCESSFUL EXECUTIONS for method asString(com.github.ideaseeker.list.Node)
+    ///region SUCCESSFUL EXECUTIONS for method asString(io.github.ideaseeker.list.Node)
     
     /**
     <pre>
@@ -158,8 +117,8 @@ public class MyLinkedListTest {
     public void testAsString_CurrentHasNext() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
         Node node = new Node(Integer.MIN_VALUE);
         
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
+        Class myLinkedListClazz = Class.forName("io.github.ideaseeker.list.MyLinkedList");
+        Class nodeType = Class.forName("io.github.ideaseeker.list.Node");
         Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
         asStringMethod.setAccessible(true);
         java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
@@ -170,32 +129,9 @@ public class MyLinkedListTest {
         
         assertEquals(expected, actual);
     }
-    
-    /**
-      */
-    @Test
-    @DisplayName("asString: ")
-    public void testAsString() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  {
-        Node node = new Node(Integer.MIN_VALUE);
-        Node node1 = new Node(0);
-        node1.value = 1;
-        node.next = node1;
-        
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
-        Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
-        asStringMethod.setAccessible(true);
-        java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
-        asStringMethodArguments[0] = node;
-        String actual = ((String) asStringMethod.invoke(null, asStringMethodArguments));
-        
-        String expected = "[-2147483648] -> [1] -> ";
-        
-        assertEquals(expected, actual);
-    }
     ///endregion
     
-    ///region ERROR SUITE for method asString(com.github.ideaseeker.list.Node)
+    ///region ERROR SUITE for method asString(io.github.ideaseeker.list.Node)
     
     /**
     <pre>
@@ -206,10 +142,10 @@ public class MyLinkedListTest {
     @Test
     @DisplayName("asString: while(current.hasNext()) -> ThrowNullPointerException")
     public void testAsString_ThrowNullPointerException() throws Throwable  {
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.asString
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.asString
         produces Runtime exception java.lang.NullPointerException */
-        Class myLinkedListClazz = Class.forName("com.github.ideaseeker.list.MyLinkedList");
-        Class nodeType = Class.forName("com.github.ideaseeker.list.Node");
+        Class myLinkedListClazz = Class.forName("io.github.ideaseeker.list.MyLinkedList");
+        Class nodeType = Class.forName("io.github.ideaseeker.list.Node");
         Method asStringMethod = myLinkedListClazz.getDeclaredMethod("asString", nodeType);
         asStringMethod.setAccessible(true);
         java.lang.Object[] asStringMethodArguments = new java.lang.Object[1];
@@ -224,50 +160,9 @@ public class MyLinkedListTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.g
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.add
     
-    ///region SUCCESSFUL EXECUTIONS for method g(int)
-    
-    /**
-    <pre>
-    Test returns from: {@code return 1 / a; }
- * </pre>
-     */
-    @Test
-    @DisplayName("g: -> return 1 / a")
-    public void testG_Return1DivideA() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        int actual = myLinkedList.g(1);
-        
-        assertEquals(1, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method g(int)
-    
-    /**
-    <pre>
-    Test 
- * throws ArithmeticException in g function body
- * </pre>
-     */
-    @Test
-    @DisplayName("g: public int g(int a) { return 1 / a } -> ThrowArithmeticException")
-    public void testG_ThrowArithmeticException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.g
-        produces Runtime exception java.lang.ArithmeticException: / by zero */
-        myLinkedList.g(0);
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.add
-    
-    ///region SUCCESSFUL EXECUTIONS for method add(com.github.ideaseeker.list.Node)
+    ///region SUCCESSFUL EXECUTIONS for method add(io.github.ideaseeker.list.Node)
     
     /**
     <pre>
@@ -278,8 +173,8 @@ public class MyLinkedListTest {
     @Test
     @DisplayName("add: -> NodeSetNext")
     public void testAdd_NodeSetNext() throws Exception  {
-        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("com.github.ideaseeker.list.MyLinkedList"));
-        Node node = ((Node) createInstance("com.github.ideaseeker.list.Node"));
+        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("io.github.ideaseeker.list.MyLinkedList"));
+        Node node = ((Node) createInstance("io.github.ideaseeker.list.Node"));
         setField(node, "next", null);
         setField(myLinkedList, "tail", node);
         
@@ -291,7 +186,7 @@ public class MyLinkedListTest {
     }
     ///endregion
     
-    ///region ERROR SUITE for method add(com.github.ideaseeker.list.Node)
+    ///region ERROR SUITE for method add(io.github.ideaseeker.list.Node)
     
     /**
     <pre>
@@ -304,10 +199,10 @@ public class MyLinkedListTest {
     @Test
     @DisplayName("add: tail.setNext(node) : True -> ThrowNullPointerException")
     public void testAdd_NodeSetNext_1() throws Exception  {
-        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("com.github.ideaseeker.list.MyLinkedList"));
+        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("io.github.ideaseeker.list.MyLinkedList"));
         setField(myLinkedList, "tail", null);
         
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.add
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.add
         produces Runtime exception java.lang.NullPointerException */
         myLinkedList.add(null);
     }
@@ -315,7 +210,7 @@ public class MyLinkedListTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.toString
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.toString
     
     ///region SUCCESSFUL EXECUTIONS for method toString()
     
@@ -338,23 +233,6 @@ public class MyLinkedListTest {
         
         assertEquals(expected, actual);
     }
-    
-    /**
-      */
-    @Test
-    @DisplayName("toString: ")
-    public void testToString() {
-        Node node = new Node(0);
-        Node node1 = new Node(0);
-        node.next = node1;
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        String actual = myLinkedList.toString();
-        
-        String expected = "[0] -> [0] -> ";
-        
-        assertEquals(expected, actual);
-    }
     ///endregion
     
     ///region ERROR SUITE for method toString()
@@ -372,7 +250,7 @@ public class MyLinkedListTest {
     public void testToString_MyLinkedListAsString_1() {
         MyLinkedList myLinkedList = new MyLinkedList(null);
         
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.toString
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.toString
         produces Runtime exception java.lang.NullPointerException */
         myLinkedList.toString();
     }
@@ -380,7 +258,7 @@ public class MyLinkedListTest {
     
     ///endregion
     
-    ///region Test suites for executable com.github.ideaseeker.list.MyLinkedList.toArray
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.toArray
     
     ///region
     
@@ -395,7 +273,7 @@ public class MyLinkedListTest {
     public void testToArray_ThrowNullPointerException() {
         MyLinkedList myLinkedList = new MyLinkedList(null);
         
-        /* This test fails because executable under testing com.github.ideaseeker.list.MyLinkedList.toArray
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.toArray
         produces Runtime exception java.lang.NullPointerException */
         myLinkedList.toArray();
     }
@@ -440,7 +318,7 @@ public class MyLinkedListTest {
                 field.setAccessible(true);
                 java.lang.reflect.Field modifiersField = java.lang.reflect.Field.class.getDeclaredField("modifiers");
                 modifiersField.setAccessible(true);
-                modifiersField.setInt(field, field.getModifiers() & ~Modifier.FINAL);
+                modifiersField.setInt(field, field.getModifiers() & ~java.lang.reflect.Modifier.FINAL);
                 
                 return field.get(obj);
             } catch (NoSuchFieldException e) {

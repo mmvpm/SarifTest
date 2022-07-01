@@ -8,9 +8,9 @@ on:
         type: boolean
         default: true
 #       targetClasses:
-#         description: "Classes for test generation ('[]' = all)"
+#         description: "Classes for test generation"
 #         type: string
-#         default: '[]'
+#         default: 'all'
       generatedTestsRelativeRoot:
         description: "Relative path to the root of the tests"
         type: string

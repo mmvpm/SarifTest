@@ -21,9 +21,9 @@ public class UtilTest {
     @Test
     @DisplayName("square: UtilMultiply -> return multiply(a, a)")
     public void testSquare_UtilMultiply() {
-        int actual = Util.square(26);
+        int actual = Util.square(-256);
         
-        assertEquals(676, actual);
+        assertEquals(65536, actual);
     }
     ///endregion
     
@@ -42,7 +42,29 @@ public class UtilTest {
     public void testSquare_UtilMultiply_1() {
         /* This test fails because executable under testing io.github.ideaseeker.util.Util.square
         produces Runtime exception java.lang.ArithmeticException: integer overflow */
-        Util.square(-33554530);
+        Util.square(1883508878);
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable io.github.ideaseeker.util.Util.multiply
+    
+    ///region SUCCESSFUL EXECUTIONS for method multiply(int, int)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Math::multiplyExact once
+ * returns from: {@code return Math.multiplyExact(x, y); }
+ * </pre>
+     */
+    @Test
+    @DisplayName("multiply: MathMultiplyExact -> return Math.multiplyExact(x, y)")
+    public void testMultiply_MathMultiplyExact() {
+        int actual = Util.multiply(-184, -256);
+        
+        assertEquals(47104, actual);
     }
     ///endregion
     
@@ -89,28 +111,6 @@ public class UtilTest {
     
     ///endregion
     
-    ///region Test suites for executable io.github.ideaseeker.util.Util.multiply
-    
-    ///region SUCCESSFUL EXECUTIONS for method multiply(int, int)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Math::multiplyExact once
- * returns from: {@code return Math.multiplyExact(x, y); }
- * </pre>
-     */
-    @Test
-    @DisplayName("multiply: MathMultiplyExact -> return Math.multiplyExact(x, y)")
-    public void testMultiply_MathMultiplyExact() {
-        int actual = Util.multiply(-4, 0);
-        
-        assertEquals(0, actual);
-    }
-    ///endregion
-    
-    ///endregion
-    
     ///region Test suites for executable io.github.ideaseeker.util.Util.bubbleSort
     
     ///region SUCCESSFUL EXECUTIONS for method bubbleSort(int[])
@@ -133,10 +133,10 @@ public class UtilTest {
     /**
     <pre>
     Test iterates the loop {@code for(int i = 0; i < bound; ++i) } once. 
- * Test afterwards does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
+ * Test further does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): True }
- * Test further returns from: {@code return array; }
+ * Test next returns from: {@code return array; }
  * </pre>
      */
     @Test
@@ -155,13 +155,13 @@ public class UtilTest {
  * Test next does not iterate {@code for(int j = i + 1; j < bound; ++j) }, iterates the loop {@code for(int i = 0; i < bound; ++i) } once,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
- * Test later returns from: {@code return array; }
+ * Test next returns from: {@code return array; }
  * </pre>
      */
     @Test
     @DisplayName("bubbleSort: array[i] > array[i + 1] : False -> return array")
     public void testBubbleSort_IOfArrayLessOrEqualI1OfArray() {
-        int[] intArray = {-140, -140};
+        int[] intArray = {-255, -255};
         
         int[] actual = Util.bubbleSort(intArray);
         
@@ -210,7 +210,7 @@ public class UtilTest {
  *     inside this loop, the test iterates the loop {@code for(int j = i + 1; j < bound; ++j) } once,
  *         inside this loop, the test executes conditions:
  *     {@code (array[i] > array[j]): True }
- * Test afterwards iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
+ * Test later iterates the loop {@code for(int i = 0; i < bound; ++i) } twice,
  *     inside this loop, the test executes conditions:
  *     {@code (array[i] > array[i + 1]): False }
  *     {@code (array[i] > array[i + 1]): True }

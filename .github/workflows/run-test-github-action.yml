@@ -45,12 +45,12 @@ on:
           - 'do-not-mock-statics'
           - 'mock-statics'
         default: 'mock-statics'
-      forceStaticMocking:
-        type: choice
-        options:
-          - 'force'
-          - 'do-not-force'
-        default: 'force'
+#       forceStaticMocking:
+#         type: choice
+#         options:
+#           - 'force'
+#           - 'do-not-force'
+#         default: 'force'
 #       classesToMockAlways:
 #         type: string
 #         default: '[]'
@@ -77,12 +77,12 @@ jobs:
       uses: Ideaseeker/test-github-action@main
       with:
         pushTests: ${{ inputs.pushTests }}
-        targetClasses: '[]' # all
+        # targetClasses: ${{ inputs.targetClasses }}
         generatedTestsRelativeRoot: ${{ inputs.generatedTestsRelativeRoot }}
         testFramework: ${{ inputs.testFramework }}
         generationTimeout: ${{ inputs.generationTimeout }}
         codegenLanguage: ${{ inputs.codegenLanguage }}
         mockStrategy: ${{ inputs.mockStrategy }}
         staticsMocking: ${{ inputs.staticsMocking }}
-        forceStaticMocking: ${{ inputs.forceStaticMocking }}
-        classesToMockAlways: '[]'
+        # forceStaticMocking: ${{ inputs.forceStaticMocking }}
+        # classesToMockAlways: ${{ inputs.classesToMockAlways }}

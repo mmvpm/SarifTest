@@ -35,10 +35,10 @@ on:
       mockStrategy:
         type: choice
         options:
-          - 'do-not-mock'
-          - 'package-based'
-          - 'all-except-cut'
-        default: 'package-based'
+          - 'no-mocks'
+          - 'other-packages'
+          - 'other-classes'
+        default: 'other-packages'
       staticsMocking:
         type: choice
         options: 

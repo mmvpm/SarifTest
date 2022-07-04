@@ -8,184 +8,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mockStatic;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MyLinkedListTest {
-    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.add
-    
-    ///region SUCCESSFUL EXECUTIONS for method add(io.github.ideaseeker.list.Node)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Node::setNext once
- * </pre>
-     */
-    @Test
-    @DisplayName("add: -> NodeSetNext")
-    public void testAdd_NodeSetNext() throws Exception  {
-        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("io.github.ideaseeker.list.MyLinkedList"));
-        Node node = ((Node) createInstance("io.github.ideaseeker.list.Node"));
-        setField(node, "next", null);
-        setField(myLinkedList, "tail", node);
-        
-        myLinkedList.add(null);
-        
-        Object finalMyLinkedListTail = getFieldValue(myLinkedList, "tail");
-        
-        assertNull(finalMyLinkedListTail);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method add(io.github.ideaseeker.list.Node)
-    
-    /**
-    <pre>
-    Test invokes:
- *     Node::setNext once
- * 
- * throws NullPointerException in: tail.setNext(node);
- * </pre>
-     */
-    @Test
-    @DisplayName("add: tail.setNext(node) : True -> ThrowNullPointerException")
-    public void testAdd_NodeSetNext_1() throws Exception  {
-        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("io.github.ideaseeker.list.MyLinkedList"));
-        setField(myLinkedList, "tail", null);
-        
-        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.add
-        produces Runtime exception java.lang.NullPointerException */
-        myLinkedList.add(null);
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.toString
-    
-    ///region SUCCESSFUL EXECUTIONS for method toString()
-    
-    /**
-    <pre>
-    Test invokes:
- *     MyLinkedList::asString once
- * returns from: {@code return asString(head); }
- * </pre>
-     */
-    @Test
-    @DisplayName("toString: MyLinkedListAsString -> return asString(head)")
-    public void testToString_MyLinkedListAsString() {
-        Node node = new Node(Integer.MIN_VALUE);
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        String actual = myLinkedList.toString();
-        
-        String expected = "[-2147483648] -> ";
-        
-        assertEquals(expected, actual);
-    }
-    
-    /**
-      */
-    @Test
-    @DisplayName("toString: ")
-    public void testToString() {
-        Node node = new Node(-4);
-        Node node1 = new Node(0);
-        node.next = node1;
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        String actual = myLinkedList.toString();
-        
-        String expected = "[-4] -> [0] -> ";
-        
-        assertEquals(expected, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method toString()
-    
-    /**
-    <pre>
-    Test invokes:
- *     MyLinkedList::asString once
- * 
- * throws NullPointerException in: return asString(head);
- * </pre>
-     */
-    @Test
-    @DisplayName("toString: return asString(head) : True -> ThrowNullPointerException")
-    public void testToString_MyLinkedListAsString_1() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.toString
-        produces Runtime exception java.lang.NullPointerException */
-        myLinkedList.toString();
-    }
-    ///endregion
-    
-    ///endregion
-    
-    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.toArray
-    
-    ///region SUCCESSFUL EXECUTIONS for method toArray()
-    
-    /**
-      */
-    @Test
-    @DisplayName("toArray: ")
-    public void testToArray() {
-        Node node = new Node(0);
-        Node node1 = new Node(0);
-        node.next = node1;
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        int[] actual = myLinkedList.toArray();
-        
-        int[] expected = {0, 0};
-        assertArrayEquals(expected, actual);
-    }
-    
-    /**
-      */
-    @Test
-    @DisplayName("toArray: ")
-    public void testToArray_1() {
-        Node node = new Node(0);
-        MyLinkedList myLinkedList = new MyLinkedList(node);
-        
-        int[] actual = myLinkedList.toArray();
-        
-        int[] expected = {0};
-        assertArrayEquals(expected, actual);
-    }
-    ///endregion
-    
-    ///region ERROR SUITE for method toArray()
-    
-    /**
-    <pre>
-    Test 
- * throws NullPointerException in: result.add(head.value);
- * </pre>
-     */
-    @Test
-    @DisplayName("toArray: result.add(head.value) : True -> ThrowNullPointerException")
-    public void testToArray_ThrowNullPointerException() {
-        MyLinkedList myLinkedList = new MyLinkedList(null);
-        
-        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.toArray
-        produces Runtime exception java.lang.NullPointerException */
-        myLinkedList.toArray();
-    }
-    ///endregion
-    
-    ///endregion
-    
     ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.squareElements
     
     ///region SUCCESSFUL EXECUTIONS for method squareElements()
@@ -330,7 +159,198 @@ public class MyLinkedListTest {
     
     ///endregion
     
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.add
+    
+    ///region SUCCESSFUL EXECUTIONS for method add(io.github.ideaseeker.list.Node)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Node::setNext once
+ * </pre>
+     */
+    @Test
+    @DisplayName("add: -> NodeSetNext")
+    public void testAdd_NodeSetNext() throws Exception  {
+        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("io.github.ideaseeker.list.MyLinkedList"));
+        Node node = ((Node) createInstance("io.github.ideaseeker.list.Node"));
+        setField(node, "next", null);
+        setField(myLinkedList, "tail", node);
+        
+        myLinkedList.add(null);
+        
+        Object finalMyLinkedListTail = getFieldValue(myLinkedList, "tail");
+        
+        assertNull(finalMyLinkedListTail);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method add(io.github.ideaseeker.list.Node)
+    
+    /**
+    <pre>
+    Test invokes:
+ *     Node::setNext once
+ * 
+ * throws NullPointerException in: tail.setNext(node);
+ * </pre>
+     */
+    @Test
+    @DisplayName("add: tail.setNext(node) : True -> ThrowNullPointerException")
+    public void testAdd_NodeSetNext_1() throws Exception  {
+        MyLinkedList myLinkedList = ((MyLinkedList) createInstance("io.github.ideaseeker.list.MyLinkedList"));
+        setField(myLinkedList, "tail", null);
+        
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.add
+        produces Runtime exception java.lang.NullPointerException */
+        myLinkedList.add(null);
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.toString
+    
+    ///region SUCCESSFUL EXECUTIONS for method toString()
+    
+    /**
+    <pre>
+    Test invokes:
+ *     MyLinkedList::asString once
+ * returns from: {@code return asString(head); }
+ * </pre>
+     */
+    @Test
+    @DisplayName("toString: MyLinkedListAsString -> return asString(head)")
+    public void testToString_MyLinkedListAsString() {
+        Node node = new Node(Integer.MIN_VALUE);
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        String actual = myLinkedList.toString();
+        
+        String expected = "[-2147483648] -> ";
+        
+        assertEquals(expected, actual);
+    }
+    
+    /**
+      */
+    @Test
+    @DisplayName("toString: ")
+    public void testToString() {
+        Node node = new Node(0);
+        Node node1 = new Node(0);
+        node.next = node1;
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        String actual = myLinkedList.toString();
+        
+        String expected = "[0] -> [0] -> ";
+        
+        assertEquals(expected, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method toString()
+    
+    /**
+    <pre>
+    Test invokes:
+ *     MyLinkedList::asString once
+ * 
+ * throws NullPointerException in: return asString(head);
+ * </pre>
+     */
+    @Test
+    @DisplayName("toString: return asString(head) : True -> ThrowNullPointerException")
+    public void testToString_MyLinkedListAsString_1() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.toString
+        produces Runtime exception java.lang.NullPointerException */
+        myLinkedList.toString();
+    }
+    ///endregion
+    
+    ///endregion
+    
+    ///region Test suites for executable io.github.ideaseeker.list.MyLinkedList.toArray
+    
+    ///region SUCCESSFUL EXECUTIONS for method toArray()
+    
+    /**
+      */
+    @Test
+    @DisplayName("toArray: ")
+    public void testToArray() {
+        Node node = new Node(0);
+        Node node1 = new Node(0);
+        node.next = node1;
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        int[] actual = myLinkedList.toArray();
+        
+        int[] expected = {0, 0};
+        assertArrayEquals(expected, actual);
+    }
+    
+    /**
+      */
+    @Test
+    @DisplayName("toArray: ")
+    public void testToArray_1() {
+        Node node = new Node(0);
+        MyLinkedList myLinkedList = new MyLinkedList(node);
+        
+        int[] actual = myLinkedList.toArray();
+        
+        int[] expected = {0};
+        assertArrayEquals(expected, actual);
+    }
+    ///endregion
+    
+    ///region ERROR SUITE for method toArray()
+    
+    /**
+    <pre>
+    Test 
+ * throws NullPointerException in: result.add(head.value);
+ * </pre>
+     */
+    @Test
+    @DisplayName("toArray: result.add(head.value) : True -> ThrowNullPointerException")
+    public void testToArray_ThrowNullPointerException() {
+        MyLinkedList myLinkedList = new MyLinkedList(null);
+        
+        /* This test fails because executable under testing io.github.ideaseeker.list.MyLinkedList.toArray
+        produces Runtime exception java.lang.NullPointerException */
+        myLinkedList.toArray();
+    }
+    ///endregion
+    
+    ///endregion
+    
     ///region Data providers and utils methods
+    
+    private static Object getFieldValue(Object obj, String fieldName) throws IllegalAccessException, NoSuchFieldException {
+        Class<?> clazz = obj.getClass();
+        java.lang.reflect.Field field;
+        do {
+            try {
+                field = clazz.getDeclaredField(fieldName);
+                field.setAccessible(true);
+                java.lang.reflect.Field modifiersField = java.lang.reflect.Field.class.getDeclaredField("modifiers");
+                modifiersField.setAccessible(true);
+                modifiersField.setInt(field, field.getModifiers() & ~java.lang.reflect.Modifier.FINAL);
+                
+                return field.get(obj);
+            } catch (NoSuchFieldException e) {
+                clazz = clazz.getSuperclass();
+            }
+        } while (clazz != null);
+    
+        throw new NoSuchFieldException("Field '" + fieldName + "' not found on class " + obj.getClass());
+    }
     
     private static Object createInstance(String className) 
             throws ClassNotFoundException, NoSuchMethodException, NoSuchFieldException, IllegalAccessException, InvocationTargetException {
@@ -358,26 +378,6 @@ public class MyLinkedListTest {
     
         field.setAccessible(true);
         field.set(object, fieldValue);
-    }
-    
-    private static Object getFieldValue(Object obj, String fieldName) throws IllegalAccessException, NoSuchFieldException {
-        Class<?> clazz = obj.getClass();
-        java.lang.reflect.Field field;
-        do {
-            try {
-                field = clazz.getDeclaredField(fieldName);
-                field.setAccessible(true);
-                java.lang.reflect.Field modifiersField = java.lang.reflect.Field.class.getDeclaredField("modifiers");
-                modifiersField.setAccessible(true);
-                modifiersField.setInt(field, field.getModifiers() & ~java.lang.reflect.Modifier.FINAL);
-                
-                return field.get(obj);
-            } catch (NoSuchFieldException e) {
-                clazz = clazz.getSuperclass();
-            }
-        } while (clazz != null);
-    
-        throw new NoSuchFieldException("Field '" + fieldName + "' not found on class " + obj.getClass());
     }
     
     private static Object getUnsafeInstance() throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {

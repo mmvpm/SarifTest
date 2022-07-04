@@ -60,8 +60,8 @@ jobs:
       with:
         gradle-version: 6.8
 
-    - name: Run test-github-action
-      uses: Ideaseeker/test-github-action@main
+    - name: Run UTBotJava-action
+      uses: UnitTestBot/UTBotJava-action@main
       with:
         pushTests: ${{ inputs.pushTests }}
         generatedTestsRelativeRoot: ${{ inputs.generatedTestsRelativeRoot }}

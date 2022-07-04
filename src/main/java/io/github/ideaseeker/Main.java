@@ -2,14 +2,20 @@ package io.github.ideaseeker;
 
 public class Main {
 
-    public int[] divideAll(int[] array, int divisor) {
+    public boolean isSorted(int[] array) {
         for (int i = 0; i < array.length; ++i) {
-            array[i] = divide(array[i], divisor);
+            if (array[i] > array[i + 1]) {
+                return false;
+            }
         }
-        return array;
+        return true;
     }
 
-    public int divide(int a, int b) {
-        return a / b;
+    public static int square(int number) {
+        return multiply(number, number);
+    }
+
+    private static int multiply(int x, int y) {
+        return Math.multiplyExact(x, y);
     }
 }

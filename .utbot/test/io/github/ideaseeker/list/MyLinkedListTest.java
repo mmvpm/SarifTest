@@ -238,15 +238,14 @@ public class MyLinkedListTest {
     @Test
     @DisplayName("toString: ")
     public void testToString() {
-        Node node = new Node(Integer.MIN_VALUE);
+        Node node = new Node(1);
         Node node1 = new Node(0);
-        node1.value = 1;
         node.next = node1;
         MyLinkedList myLinkedList = new MyLinkedList(node);
         
         String actual = myLinkedList.toString();
         
-        String expected = "[-2147483648] -> [1] -> ";
+        String expected = "[1] -> [0] -> ";
         
         assertEquals(expected, actual);
     }
